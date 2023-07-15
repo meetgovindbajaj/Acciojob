@@ -39,6 +39,7 @@ body {
     text-transform: capitalize;
     font-size: 1.1rem;
     margin-block: 2rem;
+    border: none;
 }
 
 a {
