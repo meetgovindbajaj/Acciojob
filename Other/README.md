@@ -1,27 +1,27 @@
 <base target="_blank">
 
-## [Acciojob Blog Page](https://meetgovindbajaj.github.io/Acciojob/Other/Acciojob%20Blog%20Page)
+### [Acciojob Blog Page](https://meetgovindbajaj.github.io/Acciojob/Other/Acciojob%20Blog%20Page)
 
-## [Acciojob Contest](https://meetgovindbajaj.github.io/Acciojob/Other/acciojob-contest)
+### [Acciojob Contest](https://meetgovindbajaj.github.io/Acciojob/Other/acciojob-contest)
 
-## [Architecture](https://meetgovindbajaj.github.io/Acciojob/Other/Architecture)
+### [Architecture](https://meetgovindbajaj.github.io/Acciojob/Other/Architecture)
 
-## [BlinkIt](https://meetgovindbajaj.github.io/Acciojob/Other/blinkit)
+### [BlinkIt](https://meetgovindbajaj.github.io/Acciojob/Other/blinkit)
 
-## [Block or Inline](https://meetgovindbajaj.github.io/Acciojob/Other/Block%20or%20Inline)
+### [Block or Inline](https://meetgovindbajaj.github.io/Acciojob/Other/Block%20or%20Inline)
 
-## [Dog Adoption](https://meetgovindbajaj.github.io/Acciojob/Other/Dog%20Adoption)
+### [Dog Adoption](https://meetgovindbajaj.github.io/Acciojob/Other/Dog%20Adoption)
 
-## [Footer Assignment](https://meetgovindbajaj.github.io/Acciojob/Other/Footer%20Assignment)
+### [Footer Assignment](https://meetgovindbajaj.github.io/Acciojob/Other/Footer%20Assignment)
 
-## [Image Maps](https://meetgovindbajaj.github.io/Acciojob/Other/Image-maps)
+### [Image Maps](https://meetgovindbajaj.github.io/Acciojob/Other/Image-maps)
 
-## [Pinterest](https://meetgovindbajaj.github.io/Acciojob/Other/pinterest)
+### [Pinterest](https://meetgovindbajaj.github.io/Acciojob/Other/pinterest)
 
-## [Pizza Restaurant](https://meetgovindbajaj.github.io/Acciojob/Other/pizza-restaurant)
+### [Pizza Restaurant](https://meetgovindbajaj.github.io/Acciojob/Other/pizza-restaurant)
 
-## [Playlist](https://meetgovindbajaj.github.io/Acciojob/Other/Playlist)
+### [Playlist](https://meetgovindbajaj.github.io/Acciojob/Other/Playlist)
 
-## [Pseudo Classes](https://meetgovindbajaj.github.io/Acciojob/Other/pseudo-classes)
+### [Pseudo Classes](https://meetgovindbajaj.github.io/Acciojob/Other/pseudo-classes)
 
-## [Table](https://meetgovindbajaj.github.io/Acciojob/Other/table)
+### [Table](https://meetgovindbajaj.github.io/Acciojob/Other/table)
