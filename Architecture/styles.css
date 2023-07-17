@@ -1,0 +1,19 @@
+/*  your css code here. If applicable */
+div {
+    width: 1100px;
+}
+
+td:nth-child(2n) {
+    width: 200px;
+    overflow: hidden;
+}
+
+img {
+    width: inherit;
+    object-fit: contain;
+}
+
+td:nth-child(2n+1) {
+    width: 600px;
+    overflow: hidden;
+}
