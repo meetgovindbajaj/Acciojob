@@ -1,6 +1,6 @@
-<base target="_blank">
-
 # Main
+
+<base target="_blank">
 
 ## [Frontend 1 Contest-1 July](https://meetgovindbajaj.github.io/Acciojob/Main/Frontend%201%20Contest-1%20July/)
 
@@ -8,7 +8,7 @@
 
 ## [Semantic Navba & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navba%20&%20Audios)
 
-## [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday])
+## [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday)
 
 # Other
 

@@ -6,4 +6,4 @@
 
 ## [Semantic Navba & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navba%20&%20Audios)
 
-## [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday])
+## [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday)
