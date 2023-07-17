@@ -6,7 +6,7 @@
 
 ## [History Blog](https://meetgovindbajaj.github.io/Acciojob/Main/History%20Blog)
 
-## [Semantic Navba & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navba%20&%20Audios)
+## [Semantic Navbar & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navbar%20&%20Audios)
 
 ## [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday)
 
