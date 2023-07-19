@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Adoption Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form name="form" id="form" method="post">
+      <div class="div">
+        <label for="name">Name :</label>
+        <input
+          required
+          type="text"
+          name="name"
+          id="name"
+          minlength="3"
+          maxlength="20"
+          autocomplete="name"
+          placeholder="Name"
+        />
+      </div>
+      <div class="div">
+        <label for="phone">Phone :</label>
+        <input
+          required
+          type="text"
+          name="phone"
+          id="phone"
+          autocomplete="tel"
+          placeholder="Phone Number"
+        />
+      </div>
+      <div class="div">
+        <label for="address">Address :</label>
+        <input
+          required
+          type="text"
+          name="address"
+          id="address"
+          minlength="3"
+          maxlength="20"
+          autocomplete="street-address"
+          placeholder="Address"
+        />
+      </div>
+      <div class="div">
+        <label for="multiSelect">Preferred Breeds :</label>
+        <select name="multiSelect" id="multiSelect" multiple>
+          <option value="bulldog">Bulldog</option>
+          <option value="germenshepherd">Germen Shepherd</option>
+          <option value="husky">Husky</option>
+        </select>
+      </div>
+      <div class="div">
+        <input
+          type="checkbox"
+          name="checkbox"
+          id="checkbox"
+          value="Have you ever lived with a Dog before?"
+        />
+        <label for="checkbox">Have you ever lived with a Dog before? </label>
+      </div>
+      <input type="submit" value="Submit" id="submit" />
+      <input type="reset" value="Reset" id="reset" />
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

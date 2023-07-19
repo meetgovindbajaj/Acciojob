@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: .5rem;
+    border: 2px solid black;
+}
+
+th {
+    text-align: left;
+    font-weight: normal;
+    color: white;
+    background: rgba(192, 80, 77, 1);
+}
+
+td:not(:first-child) {
+    text-align: right;
+}
+
+.row1 {
+    color: white;
+    background: #da9694;
+}
+
+.row2 {
+    background: #f2dcdb;
+}
+
+.row3 {
+    background: #d9d9d9;
+}
