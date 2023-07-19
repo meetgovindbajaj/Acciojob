@@ -1,5 +1,3 @@
-## [<- Back](/README.md)
-
 ### [Acciojob Blog Page](https://meetgovindbajaj.github.io/Acciojob/Other/Acciojob%20Blog%20Page/)
 
 ### [Acciojob Contest](https://meetgovindbajaj.github.io/Acciojob/Other/acciojob-contest/)

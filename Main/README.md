@@ -1,5 +1,3 @@
-## [<- Back](/README.md)
-
 ### [Alignment](https://meetgovindbajaj.github.io/Acciojob/Main/Alignment/)
 
 ### [Car Insurance Form](https://meetgovindbajaj.github.io/Acciojob/Main/Car%20Insurance%20Form/)
