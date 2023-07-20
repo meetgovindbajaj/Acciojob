@@ -16,6 +16,8 @@
 
 #### [Image Maps](https://meetgovindbajaj.github.io/Acciojob/Other/Image-maps/)
 
+#### [Netflix Landing Page](https://meetgovindbajaj.github.io/Acciojob/Other/Netflix%20Landing%20Page)
+
 #### [Pinterest](https://meetgovindbajaj.github.io/Acciojob/Other/pinterest/)
 
 #### [Pizza Restaurant](https://meetgovindbajaj.github.io/Acciojob/Other/pizza-restaurant/)
