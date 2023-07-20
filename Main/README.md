@@ -1,5 +1,7 @@
 ## Main
 
+#### [Accessible Portfolio](https://meetgovindbajaj.github.io/Acciojob/Main/Accessible%20Portfolio/)
+
 #### [Alignment](https://meetgovindbajaj.github.io/Acciojob/Main/Alignment/)
 
 #### [Car Insurance Form](https://meetgovindbajaj.github.io/Acciojob/Main/Car%20Insurance%20Form/)
@@ -12,7 +14,11 @@
 
 #### [Job App Form](https://meetgovindbajaj.github.io/Acciojob/Main/Job%20App%20Form/)
 
+#### [Movie Gallery](https://meetgovindbajaj.github.io/Acciojob/Main/Movie%20Gallery/)
+
 #### [Myntra Size Chart](https://meetgovindbajaj.github.io/Acciojob/Main/Myntra%20Size%20Chart/)
+
+#### [Portfolio Page](https://meetgovindbajaj.github.io/Acciojob/Main/Portfolio%20Page/)
 
 #### [Semantic Navbar & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navbar%20&%20Audios/)
 
