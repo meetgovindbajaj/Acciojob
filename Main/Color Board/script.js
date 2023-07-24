@@ -15,6 +15,8 @@ function createBoxes() {
 
 function handleHoverEnter(id) {
   const box = document.getElementById(id);
+  clearTimeout(box.dataset.timer);
+  delete box.dataset.timer;
   const r = Math.floor(Math.random() * 255);
   const g = Math.floor(Math.random() * 255);
   const b = Math.floor(Math.random() * 255);
@@ -22,7 +24,8 @@ function handleHoverEnter(id) {
 }
 function handleHoverLeave(id) {
   const box = document.getElementById(id);
-  setTimeout(() => {
+  box.dataset.timer = setTimeout(() => {
     box.style.backgroundColor = "rgb(29, 29, 29)";
+    delete box.dataset.timer;
   }, 1000);
 }
