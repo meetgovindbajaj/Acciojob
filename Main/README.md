@@ -24,6 +24,8 @@
 
 #### [Portfolio Page](https://meetgovindbajaj.github.io/Acciojob/Main/Portfolio%20Page/)
 
+#### [Pricing Card](https://meetgovindbajaj.github.io/Acciojob/Main/Pricing%20Card/)
+
 #### [Semantic Navbar & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navbar%20&%20Audios/)
 
 #### [Semantic Tables and Media](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Tables%20and%20Media)
@@ -31,3 +33,5 @@
 #### [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday/)
 
 #### [Tables](https://meetgovindbajaj.github.io/Acciojob/Main/Tables/)
+
+#### [Testimonials](https://meetgovindbajaj.github.io/Acciojob/Main/Testimonials/)
