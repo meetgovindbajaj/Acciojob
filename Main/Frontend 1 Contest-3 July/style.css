@@ -22,12 +22,13 @@ body {
 
 .flex_container {
     display: flex;
-    width: 100vw;
+    width: 90vw;
     height: auto;
     flex-flow: row wrap;
     justify-content: center;
     gap: 1rem;
     margin-block: 1rem;
+    margin-inline: auto;
 }
 
 .flex_box_container {
@@ -36,11 +37,12 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    flex: 1;
 }
 
 .flex_box {
-    width: 300px;
-    height: 200px;
+    width: min(450px, 90vw);
+    aspect-ratio: 3/2;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
     flex-shrink: 0;
     font-size: 2rem;
@@ -54,29 +56,21 @@ body {
     display: grid;
     gap: 1rem;
     row-gap: 1rem;
-    grid-template-areas: "g1 g1 g2 g3 g4 g4"
-        "g1 g1 g2 g3 g4 g4"
-        "g1 g1 g5 g6 g7 g7"
-        "g1 g1 g5 g6 g7 g7";
-    height: 70vh;
+    grid-template-areas:
+        "g1 g1 g1 g1 g2 g2 g3 g3 g4 g4 g4 g4"
+        "g1 g1 g1 g1 g2 g2 g3 g3 g4 g4 g4 g4"
+        "g1 g1 g1 g1 g5 g5 g6 g6 g7 g7 g7 g7"
+        "g1 g1 g1 g1 g5 g5 g6 g6 g7 g7 g7 g7"
+        "g8 g8 g8 g8 g9 g9 g9 g9 g9 g9 g9 g9"
+        "g8 g8 g8 g8 g9 g9 g9 g9 g9 g9 g9 g9"
+        "g8 g8 g8 g8 g9 g9 g9 g9 g9 g9 g9 g9"
+        "g8 g8 g8 g8 g9 g9 g9 g9 g9 g9 g9 g9";
+    height: 90vh;
     width: 90vw;
     margin-block: 1rem;
     margin-inline: auto;
 }
 
-.grid_container_2 {
-    display: grid;
-    gap: 1rem;
-    row-gap: 1rem;
-    grid-template-areas: "g1 g1 g2 g2 g2 g2"
-        "g1 g1 g2 g2 g2 g2"
-        "g1 g1 g2 g2 g2 g2"
-        "g1 g1 g2 g2 g2 g2";
-    height: 70vh;
-    width: 90vw;
-    margin-block: 1rem;
-    margin-inline: auto;
-}
 
 .grid_box_1 {
     grid-area: g1;
@@ -107,11 +101,11 @@ body {
 }
 
 .grid_box_8 {
-    grid-area: g1;
+    grid-area: g8;
 }
 
 .grid_box_9 {
-    grid-area: g2;
+    grid-area: g9;
 }
 
 .custom_grid {
