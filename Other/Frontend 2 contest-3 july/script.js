@@ -59,7 +59,7 @@ function append(type) {
   const main = document.createElement("div");
   main.className = "main_" + type;
   main.id = "main_" + type;
-  apiData.forEach((item) => {
+  apiData?.forEach((item) => {
     const main_item = document.createElement("div");
     main_item.className = `${"main_" + type + "_item"} main_card`;
 
