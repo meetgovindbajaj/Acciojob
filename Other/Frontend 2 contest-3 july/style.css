@@ -1,0 +1,256 @@
+:root {
+    --background: rgb(17, 17, 17);
+    --color: whitesmoke;
+    --blue: rgb(65, 110, 192);
+    --card: rgba(45, 45, 45, 0.685);
+    --data-color: green;
+    --data-border: 2px solid green;
+}
+
+:root [data-darkmode="false"] {
+    --background: whitesmoke;
+    --color: rgb(17, 17, 17);
+    --card: rgba(237, 237, 237, 0.685);
+}
+
+[data-state="low"] {
+    --data-color: red;
+    --data-border: 2px solid red;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    transition: all .3s linear;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: var(--background);
+    color: var(--color);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav_logo {
+    width: max-content;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.nav_logo span {
+    color: var(--blue);
+}
+
+.nav_links {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav_link,
+.nav_link * {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav_link:hover {
+    color: var(--blue);
+}
+
+.main_tabs {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.main_tabs::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    bottom: 0;
+    background-color: var(--blue);
+    left: 0;
+}
+
+[data-tab="list"].main_tabs::before {
+    translate: 100%;
+}
+
+
+.main_tab {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+[data-active="true"].main_tab {
+    color: var(--blue);
+}
+
+.loading {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.main_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+    width: 100%;
+    place-items: center;
+}
+
+.main_card {
+    background-color: var(--card);
+    padding: 2rem;
+}
+
+.main_grid_item {
+    border-radius: 10px;
+    width: min(20rem, 95vw);
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: .5rem;
+}
+
+.main_list_item {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.main_item_head {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.item_head_symbol {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.item_head_name {
+    font-size: .8rem;
+    opacity: .7;
+}
+
+.main_grid_item_body {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: .5rem;
+    justify-content: center;
+    flex: 4;
+}
+
+.main_list_item_body {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 4;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+.price_change_per {
+    width: max-content;
+    padding: .3rem 2rem;
+    margin-block: .5rem;
+    border-radius: 100px;
+    color: var(--data-color);
+    border: var(--data-border);
+}
+
+.current_price {
+    color: var(--data-color);
+    flex: 2;
+}
+
+.main_item_foot {
+    opacity: .7;
+    font-size: .6;
+    font-weight: 300;
+    word-wrap: break-word;
+    word-break: keep-all;
+    flex: 3;
+}
+
+@media screen and (width<=1400px) {
+    .main_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (width<=1000px) {
+    .main_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (width<=700px) {
+    .nav_links {
+        display: none;
+    }
+}
+
+@media screen and (width<=650px) {
+    .main_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav_logo {
+        font-size: 1.5rem;
+    }
+}

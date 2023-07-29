@@ -14,6 +14,8 @@
 
 #### [Footer Assignment](https://meetgovindbajaj.github.io/Acciojob/Other/Footer%20Assignment/)
 
+#### [Frontend 2 contest-3 july](https://meetgovindbajaj.github.io/Acciojob/Other/Frontend%202%20contest-3%20july/)
+
 #### [Image Maps](https://meetgovindbajaj.github.io/Acciojob/Other/Image-maps/)
 
 #### [Netflix Landing Page](https://meetgovindbajaj.github.io/Acciojob/Other/Netflix%20Landing%20Page)

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+header .logo {
+    /* We can add styling specifically for the logo here */
+}
+
+header .nav-links {
+    /* And some styling for the navigation links here */
+}
+
+header .search {
+    /* And finally some styling for the search functionality */
+}
+
+#featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+}
+
+#featured .playlist-card {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #282828;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#musicPlayer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+#musicPlayer .controls {
+    /* We can add styling specifically for the play/pause, next/prev buttons here */
+}
+
+#musicPlayer .track-info {
+    /* And some styling for the track info here */
+}
+
+#musicPlayer .progress-bar {
+    /* And finally some styling for the progress bar */
+}
+
+#musicPlayer .volume {
+    /* And some styling for the volume controls */
+}
+
+#playlistGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+}
+
+#playlistGrid .playlist-card {
+    background-color: #282828;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#playlistGrid .playlist-card img {
+    width: 100%;
+    height: auto;
+}
+
+#playlistGrid .playlist-card .title {
+    /* Add some styling for the title here */
+}
+
+#playlistGrid .playlist-card .creator {
+    /* Add some styling for the creator here */
+}
+
+#playlistDetail {
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+}
+
+#playlistDetail .header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#playlistDetail .header img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#playlistDetail .header .info {
+    /* Add some styling for the playlist title, description, and other info here */
+}
+
+#playlistDetail .tracklist {
+    margin-top: 40px;
+    /* Add some styling for the tracklist here */
+}
+
+#browseSection {
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+}
+
+#browseSection .genreGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#browseSection .genreCard {
+    background-color: #282828;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#browseSection .genreCard img {
+    width: 100%;
+    height: auto;
+}
+
+#browseSection .genreCard .title {
+    /* Add some styling for the title here */
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+
+    #playlistGrid,
+    #browseSection .genreGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    #playlistDetail .header {
+        gap: 40px;
+    }
+
+    #playlistDetail .header img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    #playlistGrid,
+    #browseSection .genreGrid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    #playlistDetail .header img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+
+    #playlistGrid,
+    #browseSection .genreGrid {
+        grid-template-columns: 1fr;
+    }
+
+    #playlistDetail .header {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #playlistDetail .header img {
+        width: 100%;
+    }
+}
+
+#playlistGrid .playlistCard:hover,
+#browseSection .genreCard:hover {
+    background-color: #383838;
+    cursor: pointer;
+}
