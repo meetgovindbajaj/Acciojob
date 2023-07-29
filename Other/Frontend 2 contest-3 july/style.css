@@ -3,6 +3,7 @@
     --color: whitesmoke;
     --blue: rgb(65, 110, 192);
     --card: rgba(45, 45, 45, 0.685);
+    --card-hover: rgb(23, 23, 23);
     --data-color: green;
     --data-border: 2px solid green;
 }
@@ -10,7 +11,8 @@
 :root [data-darkmode="false"] {
     --background: whitesmoke;
     --color: rgb(17, 17, 17);
-    --card: rgba(237, 237, 237, 0.685);
+    --card: rgb(224, 224, 224);
+    --card-hover: rgb(196, 196, 196);
 }
 
 [data-state="low"] {
@@ -23,17 +25,17 @@
 *::after {
     margin: 0;
     padding: 0;
-    transition: all .3s linear;
 }
 
-
 body {
+    transition: all .3s linear;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     box-sizing: border-box;
     background: var(--background);
     color: var(--color);
+    -webkit-font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar {
@@ -85,6 +87,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: all .3s linear;
 }
 
 
@@ -95,6 +98,7 @@ body {
     width: 50%;
     bottom: 0;
     background-color: var(--blue);
+    transition: all .3s linear;
     left: 0;
 }
 
@@ -112,6 +116,7 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
+    transition: all .3s linear;
 }
 
 [data-active="true"].main_tab {
@@ -119,11 +124,16 @@ body {
 }
 
 .loading {
+    margin-top: 1rem;
     width: 100%;
-    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: column nowrap;
+}
+
+#error {
+    display: none;
 }
 
 .loading_wrapper {
@@ -148,8 +158,14 @@ body {
 }
 
 .main_card {
+    transition: all .3s linear;
     background-color: var(--card);
     padding: 2rem;
+    cursor: pointer;
+}
+
+.main_card:hover {
+    background-color: var(--card-hover);
 }
 
 .main_grid_item {
@@ -157,7 +173,7 @@ body {
     width: min(20rem, 95vw);
     display: flex;
     flex-flow: column nowrap;
-    row-gap: .5rem;
+    row-gap: .7rem;
 }
 
 .main_list_item {
@@ -188,14 +204,14 @@ body {
 .main_grid_item_body {
     display: flex;
     flex-flow: column nowrap;
-    row-gap: .5rem;
+    row-gap: .7rem;
     justify-content: center;
     flex: 4;
 }
 
 .main_list_item_body {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-evenly;
     flex: 4;
@@ -211,20 +227,24 @@ body {
     border-radius: 100px;
     color: var(--data-color);
     border: var(--data-border);
+    transition: all .3s linear;
 }
 
 .current_price {
     color: var(--data-color);
     flex: 2;
+    transition: all .3s linear;
 }
 
 .main_item_foot {
-    opacity: .7;
-    font-size: .6;
     font-weight: 300;
     word-wrap: break-word;
     word-break: keep-all;
     flex: 3;
+}
+
+.main_list_item_body .main_item_foot {
+    font-size: .85rem;
 }
 
 @media screen and (width<=1400px) {
@@ -240,9 +260,14 @@ body {
 }
 
 @media screen and (width<=700px) {
-    .nav_links {
+    .nav_link:not(.form-check) {
         display: none;
     }
+
+    .main_list_item_body {
+        flex-flow: column nowrap;
+    }
+
 }
 
 @media screen and (width<=650px) {
