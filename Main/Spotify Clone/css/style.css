@@ -53,7 +53,7 @@ body {
 
 .bottom {
     position: sticky;
-    bottom: 0;
+    bottom: -2px;
     height: var(--player_height);
     background-color: black;
     z-index: 10;
