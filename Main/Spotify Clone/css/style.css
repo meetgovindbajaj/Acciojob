@@ -61,6 +61,7 @@ body {
     background-color: var(--black);
     display: flex;
     align-items: center;
+    gap: 1rem;
     padding: .5rem;
 }
 
@@ -646,6 +647,9 @@ td {
 
 
 @media screen and (orientation:portrait) {
+    :root {
+        --player_height: 8rem;
+    }
 
     html,
     body,
