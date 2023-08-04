@@ -1,11 +1,11 @@
 document.body.onload = load();
-document.addEventListener(
-  "contextmenu",
-  function (e) {
-    e.preventDefault();
-  },
-  false
-);
+// document.addEventListener(
+//   "contextmenu",
+//   function (e) {
+//     e.preventDefault();
+//   },
+//   false
+// );
 let currentPage = "/";
 const initSong = {
   id: "song-1",
@@ -289,6 +289,7 @@ const music_container = document.getElementById("audio-tag");
 // import lottieWeb from "https://cdn.skypack.dev/lottie-web";
 
 const playIconContainer = document.getElementById("play-icon");
+const playIconContainer2 = document.getElementById("play-icon-2");
 const audioPlayerContainer = document.getElementById("audio-player-container");
 const seekSlider = document.getElementById("seek-slider");
 const volumeSlider = document.getElementById("volume-slider");
@@ -308,6 +309,8 @@ function changeMusic(Song) {
   container.src = currentPlaylist.img;
   playState = "play";
   playIconContainer.src = "./assets/icons/bottom/play.svg";
+  playIconContainer2.src = "./assets/icons/bottom/play.svg";
+
   cancelAnimationFrame(raf);
   audioPlayerContainer.style.setProperty("--seek-before-width", 0 + "%");
 }
@@ -315,16 +318,33 @@ playIconContainer.addEventListener("click", () => {
   if (playState === "play") {
     audio.play();
     playIconContainer.src = "./assets/icons/bottom/pause.svg";
+    playIconContainer2.src = "./assets/icons/bottom/pause.svg";
+
     requestAnimationFrame(whilePlaying);
     playState = "pause";
   } else {
     audio.pause();
     playIconContainer.src = "./assets/icons/bottom/play.svg";
+    playIconContainer2.src = "./assets/icons/bottom/play.svg";
     cancelAnimationFrame(raf);
     playState = "play";
   }
 });
-
+playIconContainer2.addEventListener("click", () => {
+  if (playState === "play") {
+    audio.play();
+    playIconContainer.src = "./assets/icons/bottom/pause.svg";
+    playIconContainer2.src = "./assets/icons/bottom/pause.svg";
+    requestAnimationFrame(whilePlaying);
+    playState = "pause";
+  } else {
+    audio.pause();
+    playIconContainer.src = "./assets/icons/bottom/play.svg";
+    playIconContainer2.src = "./assets/icons/bottom/play.svg";
+    cancelAnimationFrame(raf);
+    playState = "play";
+  }
+});
 muteIconContainer.addEventListener("click", () => {
   if (muteState === "unmute") {
     muteIconContainer.src = "./assets/icons/bottom/sound.svg";
@@ -438,11 +458,13 @@ if ("mediaSession" in navigator) {
       requestAnimationFrame(whilePlaying);
       playState = "pause";
       playIconContainer.src = "./assets/icons/bottom/pause.svg";
+      playIconContainer2.src = "./assets/icons/bottom/pause.svg";
     } else {
       audio.pause();
       cancelAnimationFrame(raf);
       playState = "play";
       playIconContainer.src = "./assets/icons/bottom/play.svg";
+      playIconContainer2.src = "./assets/icons/bottom/play.svg";
     }
   });
   navigator.mediaSession.setActionHandler("pause", () => {
@@ -451,11 +473,13 @@ if ("mediaSession" in navigator) {
       requestAnimationFrame(whilePlaying);
       playState = "pause";
       playIconContainer.src = "./assets/icons/bottom/pause.svg";
+      playIconContainer2.src = "./assets/icons/bottom/pause.svg";
     } else {
       audio.pause();
       cancelAnimationFrame(raf);
       playState = "play";
       playIconContainer.src = "./assets/icons/bottom/play.svg";
+      playIconContainer2.src = "./assets/icons/bottom/play.svg";
     }
   });
   navigator.mediaSession.setActionHandler("seekbackward", (details) => {
@@ -480,6 +504,7 @@ if ("mediaSession" in navigator) {
       cancelAnimationFrame(raf);
       playState = "play";
       playIconContainer.src = "./assets/icons/bottom/play.svg";
+      playIconContainer2.src = "./assets/icons/bottom/play.svg";
     }
   });
 }

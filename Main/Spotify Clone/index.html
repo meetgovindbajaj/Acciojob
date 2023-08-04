@@ -60,6 +60,7 @@
             </div>
           </div>
         </section>
+       
         <!-- coded by govind bajaj -->
         <section class="main" id="main">
           <div class="topbar" id="topbar">
@@ -145,45 +146,74 @@
         </section>
       </div>
       <div class="bottom" id="audio-player-container">
-        <div class="player_left">
-          <img src="https://source.unsplash.com/random/50x50/" alt="" height="50" id="player_left_img">
-          <div class="player_left_body">
-            <div class="player_left_title" id="player_left_title"></div>
-            <div class="player_left_desc" id="player_left_desc"></div>
+        <div class="bottom_top">
+          <div class="player_left">
+            <img src="https://source.unsplash.com/random/50x50/" alt="" height="50" id="player_left_img">
+            <div class="player_left_body">
+              <div class="player_left_title" id="player_left_title"></div>
+              <div class="player_left_desc" id="player_left_desc"></div>
+            </div>
+            <div class="icon-container">
+              <img src="./assets/icons/bottom/play.svg" alt="" id="play-icon-2">
+            </div>
+            <div class="player_left_other">
+              <img src="./assets/icons/bottom/unlike.svg" alt="">
+              <img src="./assets/icons/bottom/pip.svg" alt="">
+            </div>
           </div>
-          <div class="player_left_other">
-            <img src="./assets/icons/bottom/unlike.svg" alt="">
-            <img src="./assets/icons/bottom/pip.svg" alt="">
+          <div class="player_mid">
+            <audio
+          src="./assets/songs/1, 2, 3 (feat Jason Derulo & De La Ghetto) - Sofia Reyes.m4a"
+          preload="metadata"
+          loop
+          id="audio-tag"
+        ></audio>
+            <div class="player_mid_top">
+              <img src="./assets/icons/bottom/shuffle.svg" alt="" height="20">
+              <img src="./assets/icons/bottom/backward.svg" alt="" height="20">
+              <img src="./assets/icons/bottom/play.svg" alt="" id="play-icon">
+              <img src="./assets/icons/bottom/forward.svg" alt=""height="20">
+              <img src="./assets/icons/bottom/repeat.svg" alt=""height="20">
+            </div>
+            <div class="player_mid_bottom">
+              <span id="current-time" class="time">0:00</span>
+             <input type="range" id="seek-slider" max="100" value="0" />
+             <span id="duration" class="time">0:00</span>
+            </div>
+          </div>
+          <div class="player_right">
+            <img src="./assets/icons/bottom/playlist.svg" alt="" height="16"/>
+            <img src="./assets/icons/bottom/device.svg" alt="" height="16"/>
+            <img src="./assets/icons/bottom/soundfill.svg" alt="" id="mute-icon" height="16"/>
+        <input type="range" id="volume-slider" max="100" value="100" />
+        <img src="./assets/icons/bottom/fullscreen.svg" alt="" height="16"/>
           </div>
         </div>
-        <div class="player_mid">
-          <audio
-        src="./assets/songs/1, 2, 3 (feat Jason Derulo & De La Ghetto) - Sofia Reyes.m4a"
-        preload="metadata"
-        loop
-        id="audio-tag"
-      ></audio>
-          <div class="player_mid_top">
-            <img src="./assets/icons/bottom/shuffle.svg" alt="" height="20">
-            <img src="./assets/icons/bottom/backward.svg" alt="" height="20">
-            <img src="./assets/icons/bottom/play.svg" alt="" id="play-icon">
-            <img src="./assets/icons/bottom/forward.svg" alt=""height="20">
-            <img src="./assets/icons/bottom/repeat.svg" alt=""height="20">
-          </div>
-          <div class="player_mid_bottom">
-            <span id="current-time" class="time">0:00</span>
-           <input type="range" id="seek-slider" max="100" value="0" />
-           <span id="duration" class="time">0:00</span>
-          </div>
-        </div>
-        <div class="player_right">
-          <img src="./assets/icons/bottom/playlist.svg" alt="" height="16"/>
-          <img src="./assets/icons/bottom/device.svg" alt="" height="16"/>
-          <img src="./assets/icons/bottom/soundfill.svg" alt="" id="mute-icon" height="16"/>
-      <input type="range" id="volume-slider" max="100" value="100" />
-      <img src="./assets/icons/bottom/fullscreen.svg" alt="" height="16"/>
-        </div>
-    </div>
+         <section class="sidebar_bottom" id="sidebar_bottom">
+            <div
+              class="link"
+              id="home"
+              onclick="onChangePage({page:'/',id:'home'})"
+            >
+              <img src="./assets/icons/top/home.svg" alt="" />
+            </div>
+            <div
+              class="link"
+              id="search"
+              onclick="onChangePage({page:'/search',id:'search'})"
+            >
+              <img src="./assets/icons/top/search.svg" alt="" />
+            </div>
+            <div
+              class="link"
+              id="library"
+              onclick="onChangePage({page:'/library',id:'library'})"
+            >
+              <img src="./assets/icons/top/library.svg" alt="" />
+            </div>
+          
+        </section>
+      </div>
       </div>
     </div>
     <script src="script.js"></script>
