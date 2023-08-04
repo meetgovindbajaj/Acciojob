@@ -1,32 +1,32 @@
 [
   {
     "id": "playlist-1",
-    "img": "./assets/images/list/oldisgold.jpeg",
+    "img": "./assets/images/oldisgold.jpeg",
     "title": "Old Is Gold Top100"
   },
   {
     "id": "playlist-2",
-    "img": "./assets/images/list/chai&classics.jpeg",
+    "img": "./assets/images/chai&classics.jpeg",
     "title": "Chai & Classics"
   },
   {
     "id": "playlist-3",
-    "img": "./assets/images/list/top50india.jpg",
+    "img": "./assets/images/top50india.jpg",
     "title": "Top 50 - India"
   },
   {
     "id": "playlist-4",
-    "img": "./assets/images/list/top50global.jpg",
+    "img": "./assets/images/top50global.jpg",
     "title": "Top 50 - Global"
   },
   {
     "id": "playlist-5",
-    "img": "./assets/images/list/tophits.jpeg",
+    "img": "./assets/images/tophits.jpeg",
     "title": "Top Hits"
   },
   {
     "id": "playlist-6",
-    "img": "./assets/images/list/toptrendingindia.jpeg",
+    "img": "./assets/images/toptrendingindia.jpeg",
     "title": "Top Trending India"
   }
 ]

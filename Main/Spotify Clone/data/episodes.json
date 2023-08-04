@@ -1,25 +1,25 @@
 [
   {
     "id": "episode-1",
-    "img": "./assets/images/list/ghoststories.jpeg",
+    "img": "./assets/images/ghoststories.jpeg",
     "title": "Ghost Stories in Hindi",
     "host": "Bidisha Bala"
   },
   {
     "id": "episode-2",
-    "img": "./assets/images/list/thestoriesofmahabharata.jpeg",
+    "img": "./assets/images/thestoriesofmahabharata.jpeg",
     "title": "The Stories of Mahabharata",
     "host": "Sudipta Bhawmik"
   },
   {
     "id": "episode-3",
-    "img": "./assets/images/list/bhaskarbose.jpeg",
+    "img": "./assets/images/bhaskarbose.jpeg",
     "title": "Bhaskar Bose (Hindi Thriller Poadcast)",
     "host": "Spotify Studios"
   },
   {
     "id": "episode-4",
-    "img": "./assets/images/list/virus2062.jpeg",
+    "img": "./assets/images/virus2062.jpeg",
     "title": "Virus 2062 with Ali Fazal & Richa Chadha",
     "host": "Spotify Studios"
   }

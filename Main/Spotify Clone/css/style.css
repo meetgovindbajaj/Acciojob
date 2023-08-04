@@ -1,3 +1,4 @@
+/* coded by govind bajaj */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200&family=Varela+Round&display=swap');
 
 :root {
@@ -194,6 +195,8 @@ img[src*="poadcast"] {
     align-items: center;
     justify-content: space-between;
 }
+
+/* coded by govind bajaj */
 
 .more_link {
     cursor: pointer;
@@ -491,6 +494,8 @@ td {
     row-gap: .5rem;
 }
 
+/* coded by govind bajaj */
+
 .player_mid_top {
     display: flex;
     align-items: center;
@@ -655,6 +660,7 @@ td {
 
 }
 
+/* coded by govind bajaj */
 
 #audio-player-container {
     --seek-before-width: 0%;
@@ -799,3 +805,5 @@ input[type="range"]:active::-ms-thumb {
     transform: scale(1.2);
     background: #03b500;
 }
+
+/* coded by govind bajaj */
