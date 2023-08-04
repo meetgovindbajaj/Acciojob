@@ -4,6 +4,8 @@
 
 #### [Alignment](https://meetgovindbajaj.github.io/Acciojob/Main/Alignment/)
 
+#### [Bootstrap Modals](https://meetgovindbajaj.github.io/Acciojob/Main/Bootstrap%20Modals/)
+
 #### [Car Insurance Form](https://meetgovindbajaj.github.io/Acciojob/Main/Car%20Insurance%20Form/)
 
 #### [Color Board](https://meetgovindbajaj.github.io/Acciojob/Main/Color%20Board)
@@ -33,6 +35,8 @@
 #### [Semantic Tables and Media](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Tables%20and%20Media)
 
 #### [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday/)
+
+#### [Spotify Clone](https://meetgovindbajaj.github.io/Acciojob/Main/Spotify%20Clone/)
 
 #### [Tables](https://meetgovindbajaj.github.io/Acciojob/Main/Tables/)
 

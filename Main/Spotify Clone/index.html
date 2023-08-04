@@ -3,30 +3,186 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Clone</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Spotify - Your favourite music is here</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <!-- Header content -->
-      lol
-    </header>
-    <main>
-      <section id="featured">
-        <!-- Featured Section content -->
-      </section>
-      <section id="musicPlayer">
-        <!-- Music Player content -->
-      </section>
-      <section id="playlistGrid">
-        <!-- Playlist Grid content -->
-      </section>
-      <section id="playlistDetail">
-        <!-- Playlist Detail Page content -->
-      </section>
-      <section id="browse">
-        <!-- Browse Section content -->
-      </section>
-    </main>
+    <div class="container">
+      <div class="top">
+        <section class="sidebar" id="sidebar">
+          <div class="logo" onclick="onChangePage({page:'/',id:'home'})"></div>
+          <div class="navigation" id="nav">
+            <div
+              class="link active"
+              id="home"
+              onclick="onChangePage({page:'/',id:'home'})"
+            >
+              <img src="./assets/icons/top/home.svg" alt="" />Home
+            </div>
+            <div
+              class="link"
+              id="search"
+              onclick="onChangePage({page:'/search',id:'search'})"
+            >
+              <img src="./assets/icons/top/search.svg" alt="" />Search
+            </div>
+            <div
+              class="link"
+              id="library"
+              onclick="onChangePage({page:'/library',id:'library'})"
+            >
+              <img src="./assets/icons/top/library.svg" alt="" />Your Library
+            </div>
+          </div>
+          <div class="navigation" id="nav2">
+            <div class="sub_heading">Playlists</div>
+            <div
+              class="link"
+              id="create"
+              onclick="onChangePage({page:'/create',id:'create'})"
+            >
+              <img src="./assets/icons/top/create.svg" alt="" />Create Playlist
+            </div>
+            <div
+              class="link"
+              id="likedSongs"
+              onclick="onChangePage({page:'/likedSongs',id:'likedSongs'})"
+            >
+              <img src="./assets/icons/top/likedSongs.svg" alt="" />Liked Songs
+            </div>
+            <div
+              class="link"
+              id="poadcast"
+              onclick="onChangePage({page:'/poadcast',id:'poadcast'})"
+            >
+              <img src="./assets/icons/top/poadcast.svg" alt="" />Your Episodes
+            </div>
+          </div>
+        </section>
+        <section class="main" id="main">
+          <div class="topbar" id="topbar">
+            <div class="topbar_nav">
+              <div class="backward" onclick="setPrevPage()"></div>
+              <div class="forward" onclick="setNextPage()"></div>
+            </div>
+            <div class="topbar_profile">
+              <img
+                src="./assets/icons/top/govi.png"
+                height="30"
+                alt=""
+                id="profile-image"
+              />
+              <span>Govind</span>
+              <img src="./assets/icons/top/down.svg" alt="" id="more-options" />
+            </div>
+          </div>
+          <div id="main_content">
+            <div class="mainbar" id="mainbar"></div>
+            <div class="episodebar" id="episodebar"></div>
+          </div>
+          <div id="other_content">
+            <div class="other_top">
+              <div class="other_left" id="other_left"></div>
+              <div class="other_right" id="other_right">
+                <div class="other_type">Playlist</div>
+                <div class="other_title" id="other_title"></div>
+                <div class="other_desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Praesentium ratione sit eveniet labore illum facere alias
+                  quam! Necessitatibus volup Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit. Alias similique deserunt earum
+                  itaque ad magni. Veniam sequi, dolorem neque except
+                </div>
+                <div class="other_summary">
+                  <img src="./assets/icons/top/govi.png" alt="" height="28" />
+                  <span class="other_summary_title"
+                    >Govind Bajaj ● 100,000 likes ● 200 songs,<span
+                      class="other_summary_duration"
+                    >
+                      about 12 hr 45 min</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="other_bottom" id="other_bottom">
+              <div class="other_bottom_head">
+                <img
+                  src="./assets/icons/top/play.svg"
+                  alt=""
+                  class="other_bottom_play_img"
+                />
+                <img
+                  src="./assets/icons/top/unlike.svg"
+                  alt=""
+                  class="other_bottom_like_img"
+                />
+                <img
+                  src="./assets/icons/top/three-dot.png"
+                  alt=""
+                  class="other_bottom_more_img"
+                />
+              </div>
+              <div class="other_bottom_body">
+                <table id="songList">
+                  <thead>
+                    <tr>
+                      <th colspan="2">#</th>
+                      <th colspan="7">Title</th>
+                      <th colspan="6" pcOnly>Album</th>
+                      <th colspan="5" pcOnly>Date added</th>
+                      <th colspan="2">&#128338;</th>
+                    </tr>
+                  </thead>
+                  <tbody id="songList_body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="bottom" id="audio-player-container">
+        <div class="player_left">
+          <img src="https://source.unsplash.com/random/50x50/" alt="" height="50" id="player_left_img">
+          <div class="player_left_body">
+            <div class="player_left_title" id="player_left_title"></div>
+            <div class="player_left_desc" id="player_left_desc"></div>
+          </div>
+          <div class="player_left_other">
+            <img src="./assets/icons/bottom/unlike.svg" alt="">
+            <img src="./assets/icons/bottom/pip.svg" alt="">
+          </div>
+        </div>
+        <div class="player_mid">
+          <audio
+        src="./assets/songs/1, 2, 3 (feat Jason Derulo & De La Ghetto) - Sofia Reyes.m4a"
+        preload="metadata"
+        loop
+        id="audio-tag"
+      ></audio>
+          <div class="player_mid_top">
+            <img src="./assets/icons/bottom/shuffle.svg" alt="" height="20">
+            <img src="./assets/icons/bottom/backward.svg" alt="" height="20">
+            <img src="./assets/icons/bottom/play.svg" alt="" id="play-icon">
+            <img src="./assets/icons/bottom/forward.svg" alt=""height="20">
+            <img src="./assets/icons/bottom/repeat.svg" alt=""height="20">
+          </div>
+          <div class="player_mid_bottom">
+            <span id="current-time" class="time">0:00</span>
+           <input type="range" id="seek-slider" max="100" value="0" />
+           <span id="duration" class="time">0:00</span>
+          </div>
+        </div>
+        <div class="player_right">
+          <img src="./assets/icons/bottom/playlist.svg" alt="" height="16"/>
+          <img src="./assets/icons/bottom/device.svg" alt="" height="16"/>
+          <img src="./assets/icons/bottom/soundfill.svg" alt="" id="mute-icon" height="16"/>
+      <input type="range" id="volume-slider" max="100" value="100" />
+      <img src="./assets/icons/bottom/fullscreen.svg" alt="" height="16"/>
+        </div>
+    </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

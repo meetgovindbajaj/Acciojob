@@ -1,0 +1,82 @@
+[
+  {
+    "id": "song-1",
+    "src": "./assets/songs/1, 2, 3 (feat Jason Derulo & De La Ghetto) - Sofia Reyes.m4a",
+    "title": "1, 2, 3 (feat Jason Derulo & De La Ghetto)",
+    "album": "Sofia Reyes",
+    "artist": "Jason Derulo & De La Ghetto",
+    "duration": "3:21"
+  },
+  {
+    "id": "song-2",
+    "src": "./assets/songs/Aarambh - Piyush Mishra.m4a",
+    "title": "Aarambh",
+    "artist": "Piyush Mishra",
+    "album": "Piyush Mishra",
+    "duration": "4:55"
+  },
+  {
+    "id": "song-3",
+    "src": "./assets/songs/As It Was - Harry Styles.m4a",
+    "title": "As It Was",
+    "artist": "Harry Styles",
+    "album": "Harry Styles",
+    "duration": "2:47"
+  },
+  {
+    "id": "song-4",
+    "src": "./assets/songs/Baarishein - Anuv Jain.m4a",
+    "title": "Baarishein",
+    "artist": "Anuv Jain",
+    "album": "Anuv Jain",
+    "duration": "3:27"
+  },
+  {
+    "id": "song-5",
+    "src": "./assets/songs/Black Beatles - Rae Sremmurd.m4a",
+    "title": "Black Beatles",
+    "artist": "Rae Sremmurd",
+    "album": "Rae Sremmurd",
+    "duration": "4:51"
+  },
+  {
+    "id": "song-6",
+    "src": "./assets/songs/Bloody Mary (Wednesday Nightcore) - n1ghtcxre.m4a",
+    "title": "Bloody Mary (Wednesday Nightcore)",
+    "artist": "n1ghtcxre",
+    "album": "n1ghtcxre",
+    "duration": "3:15"
+  },
+  {
+    "id": "song-7",
+    "src": "./assets/songs/Bones - Imagine Dragons.m4a",
+    "title": "Bones",
+    "artist": "Imagine Dragons",
+    "album": "Imagine Dragons",
+    "duration": "2:45"
+  },
+  {
+    "id": "song-8",
+    "src": "./assets/songs/DARKSIDE - Neoni.m4a",
+    "title": "DARKSIDE",
+    "artist": "Neoni",
+    "album": "Neoni",
+    "duration": "2:48"
+  },
+  {
+    "id": "song-9",
+    "src": "./assets/songs/Daydream - Lily Meola.m4a",
+    "title": "Daydream",
+    "artist": "Lily Meola",
+    "album": "Lily Meola",
+    "duration": "3:09"
+  },
+  {
+    "id": "song-10",
+    "src": "./assets/songs/Demon - Moonchild Sanelly, Sad Night Dynamite.m4a",
+    "title": "Demon",
+    "artist": "Moonchild Sanelly, Sad Night Dynamite",
+    "album": "Moonchild Sanelly",
+    "duration": "3:42"
+  }
+]
