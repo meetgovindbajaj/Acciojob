@@ -3,340 +3,512 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend 1 Module Test-July</title>
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="Made by Govind Bajaj" />
   </head>
   <body>
-    <div class="container">
-      <nav class="header" id="navbar">
-        <div class="logo">
-          <img src="./assets/logo.svg" alt="" />
-          <span>Codevo</span>
-        </div>
-        <ul class="links">
-          <li class="link active">Home</li>
-          <li class="link">Shop</li>
-          <li class="link">Pages</li>
-          <li class="link">About Us</li>
-          <li class="link">Lookups</li>
-        </ul>
-        <ul class="side_nav">
-          <li class="icons_nav">
-            <span>
-              <img src="./assets/search.svg" alt="" />
-            </span>
-          </li>
-          <li class="icons_nav">
-            <span>
-              <img src="./assets/user.svg" alt="" />
-            </span>
-          </li>
-          <li class="icons_nav">
-            <span class="notification" >
-              <img src="./assets/notification.svg" alt="" />
-            </span>
-          </li>
-        </ul>
-        <div class="menu">
-          <img src="./assets/menu.svg" alt="" height="48" />
-          <div class="sr-only">menu</div>
+    <header class="my-header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              class="logo-img"
+              src="./Assets/Logo.svg"
+              width="180px"
+              height="50px"
+              alt="icon"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="navbar-text collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <div class="nav-middle navbar-text">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-2 active"
+                    id="home"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-2 active"
+                    aria-current="page"
+                    href="#our-latest-col-2021"
+                    >Shop</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-2 active"
+                    aria-current="page"
+                    href="#our-latest-coll"
+                    >Pages</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-2 active"
+                    aria-current="page"
+                    href="#our-footer"
+                    >About Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-2 active"
+                    aria-current="page"
+                    href="#our-coll-secc"
+                    >Lookups</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <form class="d-flex">
+              <img class="mx-2 px-1" src="./Assets/Search.svg" alt="icon" />
+              <img class="mx-2 px-1" src="./Assets/User.svg" alt="icon" />
+              <img
+                class="mx-2 px-1"
+                src="./Assets/Notification.svg"
+                alt="icon"
+              />
+            </form>
+          </div>
         </div>
       </nav>
-      <div class="hero" id="bestseller">
-        <div class="hero_left">
-          <div class="hero_left_top">Limited Time Only For Winter</div>
-          <div class="hero_left_mid">
-            <img
-              src="./assets/fashion.png"
-              alt=""
-              width="400"
-              class="fashion"
-            />
-            <img src="./assets/i icon.svg" alt="" class="fashion_dot" />
+    </header>
+
+    <main>
+      <!-- -----------------------------Hero-section----------------- -->
+      <section
+        class="hero-sec container p-0 d-flex flex-wrap justify-content-between align-items-center"
+      >
+        <div class="left-sec">
+          <div class="hero-text d-flex flex-column">
+            <p>Limited Time Only For Winter</p>
+            <h1>fashion</h1>
+            <h4>LOOK YOUR BEST ON YOUR BEST DAY</h4>
           </div>
-          <h3 class="hero_left_bottom">Look Your Best On Your Best Day</h3>
-          <div class="hero_left_button">Explore Now!</div>
+          <button class="hero-btn">Explore Now!</button>
         </div>
-        <div class="hero_right">
-          <img
-            src="./assets/Poster BG Design.svg"
-            alt=""
-            class="hero_background"
-          />
-          <img src="./assets/hero.png" alt="" class="hero_img" />
+        <div class="right-img-sec">
+          <img src="./Assets/Poster Picture.svg" alt="pic" />
+        </div>
+      </section>
+
+      <!-- ------------------collectionn-sction----------- -->
+      <section class="collection-sec container" id="our-coll-secc">
+        <p class="m-0">COLLECTION</p>
+        <img id="exclude-icon" src="./Assets/Exclude.svg" alt="icon" />
+        <h3>Our Top Collection</h3>
+        <div
+          class="buttons d-flex flex-wrap justify-content-center align-items-center"
+        >
+          <button>Jewellery</button>
+          <button>Accessories</button>
+          <button>Dresses</button>
+          <button>Footwear</button>
+        </div>
+        <div
+          class="collection-cards d-flex flex-wrap justify-content-center align-items-center"
+        >
+          <div class="my-card m-4">
+            <div class="card-top">
+              <img
+                src="./Assets/hoddie.svg"
+                class="mt-5"
+                width="214px"
+                height="219px"
+                class="card-img-top"
+                alt="img"
+              />
+            </div>
+            <div class="card-bottom p-3 mx-2">
+              <p>Nike Men’s - Imported Hoodie Red</p>
+              <div class="d-flex justify-content-between">
+                <button>$150</button>
+                <img src="./Assets/hoddie-rating.svg" alt="rating" />
+              </div>
+            </div>
+          </div>
+
+          <div class="my-card m-4">
+            <div class="card-top">
+              <img
+                src="./Assets/blue-frok.svg"
+                class="mt-5"
+                width="214px"
+                height="219px"
+                class="card-img-top"
+                alt="img"
+              />
+            </div>
+            <div class="card-bottom p-3 mx-2">
+              <p>Armani Frok Ladies - Imported Fork Blue</p>
+              <div class="d-flex justify-content-between">
+                <button>$250</button>
+                <img src="./Assets/Rating2.svg" alt="rating" />
+              </div>
+            </div>
+          </div>
+
+          <div class="my-card m-4">
+            <div class="card-top">
+              <img
+                src="./Assets/apple-watch.svg"
+                class="mt-5"
+                width="214px"
+                height="219px"
+                class="card-img-top"
+                alt="img"
+              />
+            </div>
+            <div class="card-bottom p-3 mx-2">
+              <p>Armani Frok Ladies - Imported Fork Blue</p>
+              <div class="d-flex justify-content-between">
+                <button>$250</button>
+                <img src="./Assets/hoddie-rating.svg" alt="rating" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------Latest-collection-section------------ -->
+      <section class="Latest-collection-sec container" id="our-latest-coll">
+        <p class="m-0">New Arrival</p>
+        <img id="exclude-icon" src="./Assets/Exclude.svg" alt="icon" />
+        <h3>Latest Collection</h3>
+        <div class="grid-latest-collection">
+          <div class="grid-item A">
+            <img src="./Assets/latest-collection-pic-1.svg" alt="pic" />
+          </div>
+          <div class="grid-item B">
+            <img src="./Assets/girdposter-3.png" alt="pic" />
+          </div>
+          <div class="grid-item C">
+            <img src="./Assets/latest-col-pic-3.svg" alt="pic" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------2021-collection----------------- -->
+      <section class="collection-sec-2021 container" id="our-latest-col-2021">
+        <p class="m-0">CATEGORIES</p>
+        <img id="exclude-icon" src="./Assets/Exclude.svg" alt="icon" />
+        <h3>2021 Latest Collection</h3>
+
+        <div
+          class="collection-cards-2021 mt-5 d-flex justify-content-center align-items-center flex-wrap"
+        >
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/hoddie.svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name m-0">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top fav-card">
+              <img
+                src="./Assets/glasses.svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div
+                class="product-name fav-cart d-flex justify-content-between align-items-center"
+              >
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+                <button class>Add to Cart</button>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$80</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/t-shirt.svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/apple-watch-series-2-hardware-3-aluminium-removebg-preview 1 (1).svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/microphone-headphones-lx50-gaming-headset-pc-game-gaming-computer-png-favpng-AdrawqYscyfskmtbQnEPbgvQ7-removebg-preview 1.svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/ladies-purse.png"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/nikeshoe.svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-collection-2021">
+            <div class="card-coll-2021-top">
+              <img
+                src="./Assets/sandle.svg"
+                class="mt-5"
+                width="180px"
+                height="150px"
+                alt="img"
+              />
+            </div>
+            <div class="card-coll-2021-bottom">
+              <div class="product-name">
+                <p>Nike Air Men’s Hoodie - Imported Hoodie</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#"><p class="m-0">$150</p></a>
+                <img
+                  src="./Assets/hoddie-rating.svg"
+                  width="82px"
+                  height="18px"
+                  alt="rating"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ------------footer-section---------- -->
+
+    <footer
+      class="my-footer d-flex flex-wrap justify-content-between"
+      id="our-footer"
+    >
+      <div class="foot-col1 mx-2 pt-5">
+        <img src="./Assets/Logo.svg" width="180px" height="45px" alt="img" />
+        <p>Lorem ispum is a placeholder text</p>
+        <p>commonly used as a free text.</p>
+        <div class="social-icon">
+          <img src="./Assets/facebook-icon.svg" alt="icon" />
+          <img src="./Assets/twitter-logo.svg" alt="icon" />
+          <img src="./Assets/insta-logo.svg" alt="icon" />
+          <img src="./Assets/youtube-logo.svg" alt="icon" />
+        </div>
+        <p class="copyright-text">Copyrights 2021</p>
+        <p class="copyright-text">@Iamabdulqadeer01</p>
+      </div>
+
+      <div class="foot-col2 mx-2 pt-5">
+        <h5 class="foot-heading">Product</h5>
+        <p>Download</p>
+        <p>Price</p>
+        <p>Location</p>
+        <p>Server</p>
+        <p>Countries</p>
+      </div>
+
+      <div class="foot-col3 mx-2 pt-5">
+        <h5 class="foot-heading">Category</h5>
+        <p>Men</p>
+        <p>Women</p>
+        <p>Kids</p>
+        <p>Best Seller</p>
+        <p>New Arrivals</p>
+      </div>
+
+      <div class="foot-col4 mx-2 pt-5">
+        <h5 class="foot-heading">My Account</h5>
+        <p>My Account</p>
+        <p>Discount</p>
+        <p>Returns</p>
+        <p>Order History</p>
+        <p>Order Tracking</p>
+      </div>
+
+      <div class="foot-col5 mx-2 pt-5">
+        <h5 class="foot-heading">Contact Us</h5>
+        <div class="d-flex">
+          <img src="./Assets/address.svg" alt="icon" />
+          <h6>123 Street Trafford, London, UK</h6>
+        </div>
+        <div class="d-flex">
+          <img src="./Assets/address.svg" alt="icon" />
+          <h6>info@sitename.com</h6>
+        </div>
+        <div class="d-flex">
+          <img src="./Assets/phone-icon.svg" alt="icon" />
+          <h6>+456 789 789 001</h6>
         </div>
       </div>
-      <div class="collection" id="collection">
-        <div class="heading">Collection</div>
-        <div class="subheading">Our Top Collection</div>
-        <ul class="collection_links">
-          <li class="collection_link">Jewellery</li>
-          <li class="collection_link collection_active">Accessories</li>
-          <li class="collection_link">Dresses</li>
-          <li class="collection_link">Footwear</li>
-        </ul>
-        <div class="collection_body">
-          <div class="collection_card">
-            <div class="card_header">
-              <img src="./assets/poster-1-product.svg" alt="" height="400" />
-            </div>
-            <div class="card_body">
-              Nike Air Men's Hoodie - Imported Hoodie Red
-            </div>
-            <div class="card_footer">
-              <div class="collection_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="collection_card liked">
-            <div class="card_header">
-              <img src="./assets/latest-product.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Armani Frok Ladies - Imported Frok Blue</div>
-            <div class="card_footer">
-              <div class="collection_card_button">$250</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="no-star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="collection_card">
-            <div class="card_header">
-              <img src="./assets/collection-4.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Apple watch Series 6 - Silver Brand</div>
-            <div class="card_footer">
-              <div class="collection_card_button">$450</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="new_arrival" id="newarrival">
-        <div class="heading">New Arrival</div>
-        <div class="subheading">Latest Collection</div>
-        <div class="new_arrival_body">
-          <img src="./assets/poster-1.svg" alt="" class="new_arrival_box_1" />
-          <img src="./assets/poster-2.svg" alt="" class="new_arrival_box_1" />
-          <img src="./assets/poster-3.svg" alt="" class="new_arrival_box_2" />
-        </div>
-      </div>
-      <div class="categories" id="categories">
-        <div class="heading">Categories</div>
-        <div class="subheading">2021 Latest Collection</div>
-        <div class="categories_body">
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/poster-1-product.svg" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card liked">
-            <div class="card_header">
-              <img src="./assets/collection-2.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/collection-3.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/collection-4.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/product-1.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/product-2.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/product-3.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-          <div class="categories_card">
-            <div class="card_header">
-              <img src="./assets/product-4.png" alt="" height="400" />
-            </div>
-            <div class="card_body">Nike Air Men's Hoodie - Imported Hoodie</div>
-            <div class="card_footer">
-              <div class="categories_card_button">$150</div>
-              <div class="card_rating">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer_section_1">
-        <div class="logo">
-          <img src="./assets/logo.svg" alt="" />
-          <span>Codevo</span>
-        </div>
-        <div class="section_1_text">
-          Lorem ipsum is a placeholder text commonly used as a free text.
-        </div>
-        <div class="section_1_socials">
-          <img src="./assets/facebook.svg" alt="" />
-          <img src="./assets/twitter.svg" alt="" />
-          <img src="./assets/instagram.svg" alt="" />
-          <img src="./assets/youtube.svg" alt="" />
-        </div>
-        <div class="section_1_bottom">Copyrights 2021</div>
-        <div class="section_1_bottom">@govindbajaj</div>
-      </div>
-      <div class="footer_section_2">
-        <div class="section_2_box">
-          <div class="footer_header">Product</div>
-          <ul class="footer_links">
-            <li class="footer_link"><a href="#">Download</a></li>
-            <li class="footer_link"><a href="#">Pricing</a></li>
-            <li class="footer_link"><a href="#">Locations</a></li>
-            <li class="footer_link"><a href="#">Server</a></li>
-            <li class="footer_link"><a href="#">Countries</a></li>
-          </ul>
-        </div>
-        <div class="section_2_box">
-          <div class="footer_header">Categories</div>
-          <ul class="footer_links">
-            <li class="footer_link"><a href="#collection">Men</a></li>
-            <li class="footer_link"><a href="#collection">Women</a></li>
-            <li class="footer_link"><a href="#categories">Kids</a></li>
-            <li class="footer_link"><a href="#bestseller">Best Seller</a></li>
-            <li class="footer_link"><a href="#newarrival">New Arrivals</a></li>
-          </ul>
-        </div>
-        <div class="section_2_box">
-          <div class="footer_header">My Account</div>
-          <ul class="footer_links">
-            <li class="footer_link"><a href="#">My Account</a></li>
-            <li class="footer_link"><a href="#">Discount</a></li>
-            <li class="footer_link"><a href="#">Returns</a></li>
-            <li class="footer_link"><a href="#">Order History</a></li>
-            <li class="footer_link"><a href="#">Order Tracking</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer_section_3">
-        <div class="footer_header">Contact Us</div>
-        <div class="section_3_box">
-          <img src="./assets/location.svg" alt="" /><span
-            >123 Street Trafford, London, UK</span
-          >
-        </div>
-        <div class="section_3_box">
-          <img src="./assets/mail.svg" alt="" /><span>govind@bajaj.com</span>
-        </div>
-        <div class="section_3_box">
-          <img src="./assets/phone.svg" alt="" /><span>+456 789 789 001</span>
-        </div>
-      </div>
-    </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
