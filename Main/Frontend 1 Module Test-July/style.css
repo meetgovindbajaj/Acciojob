@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 3rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.hero {
+    border-radius: 1.25rem;
+    background: linear-gradient(90deg, rgba(252, 203, 144, 0.44) 0%, rgba(255, 154, 158, 0.38) 100%);
+}
+
+.icons_nav span {
+    position: relative;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+}
+
+.icons_nav span img {
+    height: 20px;
+}
+
+.notification::before {
+    position: absolute;
+    content: '';
+    background-color: orangered;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    top: 2px;
+    right: 0px;
+}
+
+.hero_left_mid {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.fashion_dot {
+    position: absolute;
+    top: -1px;
+    right: 50px;
+    width: min-content;
+}
