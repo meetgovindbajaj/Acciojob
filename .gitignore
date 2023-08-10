@@ -1,6 +1,7 @@
-/index.html
-/style.css
-/script.js
-/net*
-/text.md
+/*.html
+/*.css
+/*.js
+/*.jsx
+/test.*
+/test
 /assets
