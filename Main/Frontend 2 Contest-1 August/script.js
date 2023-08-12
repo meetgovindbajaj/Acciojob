@@ -17,8 +17,8 @@ function addData() {
 }
 
 function removeAdmin() {
-  const newArr = arr.filter((emp) => emp.profession !== "admin");
-  consoleArr("Removing Admins and Consoling Array Variable", newArr);
+  arr = arr.filter((emp) => emp.profession !== "admin");
+  consoleArr("Removing Admins and Consoling Array Variable");
 }
 
 function concatenateArray() {
