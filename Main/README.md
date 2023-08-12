@@ -20,6 +20,8 @@
 
 #### [Frontend 1 Module Test-July](https://meetgovindbajaj.github.io/Acciojob/Main/Frontend%201%20Module%20Test-July/)
 
+#### [Frontend 2 Contest-1 August](https://meetgovindbajaj.github.io/Acciojob/Main/Frontend%202%20Contest-1%20August/)
+
 #### [History Blog](https://meetgovindbajaj.github.io/Acciojob/Main/History%20Blog/)
 
 #### [Job App Form](https://meetgovindbajaj.github.io/Acciojob/Main/Job%20App%20Form/)
