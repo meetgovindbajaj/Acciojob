@@ -3,31 +3,59 @@ let arr = [
   { id: 2, name: "jack", age: 20, profession: "developer" },
   { id: 3, name: "karen", age: 19, profession: "admin" },
 ];
+let empCount = 3;
+const cat = ["developer", "intern", "admin"];
 
 function PrintDeveloper() {
-  arr
-    .filter((emp) => emp.profession === "developer")
-    .forEach((emp) => console.log(emp));
+  const devArr = arr.filter((emp) => emp.profession === "developer");
+  consoleArr("Consoling Developer Array Variable", devArr);
 }
 
 function addData() {
-  const newEmp = { id: 4, name: "susan", age: 20, profession: "intern" };
-  arr.push(newEmp);
+  arr.push(generateRandomEmp());
+  consoleArr("Adding Random Employee and Consoling Array Variable");
 }
 
 function removeAdmin() {
   arr = arr.filter((emp) => emp.profession !== "admin");
+  consoleArr("Removing Admins and Consoling Array Variable");
 }
 
 function concatenateArray() {
-  const arr2 = [
-    { id: 5, name: "govind", age: 23, profession: "admin" },
-    { id: 6, name: "jackie", age: 19, profession: "developer" },
-    { id: 7, name: "simren", age: 22, profession: "intern" },
-  ];
+  const arr2 = Array.from({ length: generateRandom(4, 7) }).map((_) =>
+    generateRandomEmp()
+  );
   arr = arr.concat(arr2);
+  consoleArr("Concatinated Array and Consoling Array Variable");
 }
 
-function consoleArr() {
-  console.log("Consoling Array Variable", arr);
+function consoleArr(message = "Consoling Array Variable", arr = arr) {
+  console.log(message, arr);
+}
+
+function generateRandom(start = 1, stop = 100) {
+  return Math.floor(Math.random() * (stop - start) + start);
+}
+
+function generateRandomName() {
+  const vowels = "aeiou";
+  const consonants = "bcdfghjklmnpqrstvwxyz";
+  const nameLength = Math.floor(Math.random() * 4) + 4;
+  let name = "";
+  let useVowel = Math.random() < 0.5;
+  for (let i = 0; i < nameLength; i++) {
+    if (useVowel) name += vowels[Math.floor(Math.random() * vowels.length)];
+    else name += consonants[Math.floor(Math.random() * consonants.length)];
+    useVowel = !useVowel;
+  }
+  return name;
+}
+
+function generateRandomEmp() {
+  return {
+    id: ++empCount,
+    name: generateRandomName(),
+    age: generateRandom(17, 30),
+    profession: cat[generateRandom(3)],
+  };
 }
