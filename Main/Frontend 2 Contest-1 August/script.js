@@ -5,6 +5,7 @@ let arr = [
 ];
 let empCount = 3;
 const cat = ["developer", "intern", "admin"];
+const sol = document.getElementById("sol");
 
 function PrintDeveloper() {
   const devArr = arr.filter((emp) => emp.profession === "developer");
@@ -31,6 +32,11 @@ function concatenateArray() {
 
 function consoleArr(message = "Consoling Array Variable", array = arr) {
   console.log(message, ...array);
+  sol.innerHTML = `<ul>
+      ${array.map(
+        (emp, i) => `<li key=${i + emp.id}>${JSON.stringify(emp, null, 2)}</li>`
+      )}
+    </ul>`;
 }
 
 function generateRandom(start = 1, stop = 100) {
