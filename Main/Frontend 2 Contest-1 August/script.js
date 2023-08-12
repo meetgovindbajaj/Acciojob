@@ -13,24 +13,24 @@ function PrintDeveloper() {
 
 function addData() {
   arr.push(generateRandomEmp());
-  consoleArr("Adding Random Employee and Consoling Array Variable");
+  consoleArr("Adding New Employee and Consoling Array Variable");
 }
 
 function removeAdmin() {
-  arr = arr.filter((emp) => emp.profession !== "admin");
-  consoleArr("Removing Admins and Consoling Array Variable");
+  const newArr = arr.filter((emp) => emp.profession !== "admin");
+  consoleArr("Removing Admins and Consoling Array Variable", newArr);
 }
 
 function concatenateArray() {
-  const arr2 = Array.from({ length: generateRandom(4, 7) }).map((_) =>
+  const arr2 = Array.from({ length: generateRandom(4, 8) }).map((_) =>
     generateRandomEmp()
   );
   arr = arr.concat(arr2);
   consoleArr("Concatinated Array and Consoling Array Variable");
 }
 
-function consoleArr(message = "Consoling Array Variable", arr = arr) {
-  console.log(message, arr);
+function consoleArr(message = "Consoling Array Variable", array = arr) {
+  console.log(message, ...array);
 }
 
 function generateRandom(start = 1, stop = 100) {
@@ -44,8 +44,8 @@ function generateRandomName() {
   let name = "";
   let useVowel = Math.random() < 0.5;
   for (let i = 0; i < nameLength; i++) {
-    if (useVowel) name += vowels[Math.floor(Math.random() * vowels.length)];
-    else name += consonants[Math.floor(Math.random() * consonants.length)];
+    if (useVowel) name += vowels[generateRandom(0, 5)];
+    else name += consonants[generateRandom(0, 21)];
     useVowel = !useVowel;
   }
   return name;
@@ -55,7 +55,7 @@ function generateRandomEmp() {
   return {
     id: ++empCount,
     name: generateRandomName(),
-    age: generateRandom(17, 30),
-    profession: cat[generateRandom(3)],
+    age: generateRandom(17, 31),
+    profession: cat[generateRandom(0, 3)],
   };
 }
