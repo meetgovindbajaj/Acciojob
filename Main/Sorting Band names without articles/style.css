@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stroke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: transparent;
+    -webkit-text-stroke: 4px black;
+}
+
+.band {
+    font-size: 1.5rem;
+    list-style: inside square;
+    background: white;
+    width: 500px;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.band li {
+    border-bottom: 1px solid #efefef;
+    padding: 20px;
+}
+
+.band li:last-child {
+    border-bottom: 0;
+}
+
+a {
+    color: #ffc600;
+    text-decoration: none;
+}

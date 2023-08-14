@@ -8,9 +8,13 @@
 
 #### [Bootstrap Modals](https://meetgovindbajaj.github.io/Acciojob/Main/Bootstrap%20Modals/)
 
+#### [Caesar's Cipher](https://meetgovindbajaj.github.io/Acciojob/Main/Caesar's%20Cipher/)
+
 #### [Car Insurance Form](https://meetgovindbajaj.github.io/Acciojob/Main/Car%20Insurance%20Form/)
 
 #### [Color Board](https://meetgovindbajaj.github.io/Acciojob/Main/Color%20Board)
+
+#### [Decimal to Binary](https://meetgovindbajaj.github.io/Acciojob/Main/Decimal%20to%20Binary/)
 
 #### [Dog Adoption Application](https://meetgovindbajaj.github.io/Acciojob/Main/Dog%20Adoption%20Application/)
 
@@ -28,6 +32,8 @@
 
 #### [Job App Form](https://meetgovindbajaj.github.io/Acciojob/Main/Job%20App%20Form/)
 
+#### [Minimum Cost of Ropes](https://meetgovindbajaj.github.io/Acciojob/Main/Minimum%20Cost%20of%20Ropes/)
+
 #### [Movie Gallery](https://meetgovindbajaj.github.io/Acciojob/Main/Movie%20Gallery/)
 
 #### [Myntra Size Chart](https://meetgovindbajaj.github.io/Acciojob/Main/Myntra%20Size%20Chart/)
@@ -41,6 +47,8 @@
 #### [Semantic Tables and Media](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Tables%20and%20Media)
 
 #### [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday/)
+
+#### [Sorting Band names without articles](https://meetgovindbajaj.github.io/Acciojob/Main/Sorting%20Band%20names%20without%20articles/)
 
 #### [Spotify Clone](https://meetgovindbajaj.github.io/Acciojob/Main/Spotify%20Clone/)
 
