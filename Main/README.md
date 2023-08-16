@@ -6,6 +6,8 @@
 
 #### [Alignment](https://meetgovindbajaj.github.io/Acciojob/Main/Alignment/)
 
+#### [Bold Highlighter](https://meetgovindbajaj.github.io/Acciojob/Main/Bold%20Highlighter/)
+
 #### [Bootstrap Modals](https://meetgovindbajaj.github.io/Acciojob/Main/Bootstrap%20Modals/)
 
 #### [Caesar's Cipher](https://meetgovindbajaj.github.io/Acciojob/Main/Caesar's%20Cipher/)
@@ -42,11 +44,15 @@
 
 #### [Pricing Card](https://meetgovindbajaj.github.io/Acciojob/Main/Pricing%20Card/)
 
+#### [Rotate Line](https://meetgovindbajaj.github.io/Acciojob/Main/Rotate%20Line/)
+
 #### [Semantic Navbar & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navbar%20&%20Audios/)
 
 #### [Semantic Tables and Media](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Tables%20and%20Media)
 
 #### [Shopping or Holiday](https://meetgovindbajaj.github.io/Acciojob/Main/Shopping%20or%20Holiday/)
+
+#### [Snake Game](https://meetgovindbajaj.github.io/Acciojob/Main/Snake%20Game/)
 
 #### [Sorting Band names without articles](https://meetgovindbajaj.github.io/Acciojob/Main/Sorting%20Band%20names%20without%20articles/)
 
@@ -55,3 +61,5 @@
 #### [Tables](https://meetgovindbajaj.github.io/Acciojob/Main/Tables/)
 
 #### [Testimonials](https://meetgovindbajaj.github.io/Acciojob/Main/Testimonials/)
+
+#### [Volume of a Sphere](https://meetgovindbajaj.github.io/Acciojob/Main/Volume%20of%20a%20Sphere/)
