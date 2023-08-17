@@ -1,0 +1,63 @@
+@font-face {
+    font-family: robotoMedium;
+    src: url(../fonts/Roboto/Roboto-Medium.ttf)
+}
+
+@font-face {
+    font-family: robotoLight;
+    src: url(../fonts/Roboto/Roboto-Light.ttf)
+}
+
+:root {
+    --easydiff: #2AEA00;
+    --harddiff: #EA2900;
+}
+
+canvas {
+    border: 1px solid black;
+    margin: 0 auto;
+    display: block;
+    background-color: black;
+}
+
+.headertext {
+    text-align: center;
+    font-family: robotoLight;
+}
+
+.resetbutton {
+    text-align: center;
+    font-family: robotoLight;
+    margin: 10px 0px;
+}
+
+.resetbutton #reset {
+    height: 35px;
+    padding: 0px 10px;
+}
+
+.difficultyButtons {
+    text-align: center;
+}
+
+.difficultyButtons #easy-difficulty {
+    height: 40px;
+    background: var(--easydiff);
+    padding: 10px;
+    text-align: center;
+    border: none;
+    color: white;
+    font-family: robotoLight;
+    font-size: 1em;
+}
+
+.difficultyButtons #hard-difficulty {
+    height: 40px;
+    background: var(--harddiff);
+    padding: 10px;
+    text-align: center;
+    border: none;
+    color: white;
+    font-family: robotoLight;
+    font-size: 1em;
+}
