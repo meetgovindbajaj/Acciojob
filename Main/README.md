@@ -44,6 +44,8 @@
 
 #### [Pricing Card](https://meetgovindbajaj.github.io/Acciojob/Main/Pricing%20Card/)
 
+#### [Remove Items](https://meetgovindbajaj.github.io/Acciojob/Main/Remove%20Items/)
+
 #### [Rotate Line](https://meetgovindbajaj.github.io/Acciojob/Main/Rotate%20Line/)
 
 #### [Semantic Navbar & Audios](https://meetgovindbajaj.github.io/Acciojob/Main/Semantic%20Navbar%20&%20Audios/)
