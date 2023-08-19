@@ -100,7 +100,7 @@ function handleSearch() {
     let newData = [...studentData];
     newData = newData.filter(
       (student) =>
-        regex.test(student.name.degree) ||
+        regex.test(student.name) ||
         regex.test(student.email) ||
         regex.test(student.degree)
     );
