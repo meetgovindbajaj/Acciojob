@@ -4,7 +4,7 @@ const tableContainer = document.getElementById("table");
 const search = document.getElementById("search-box");
 let formmode = 0;
 let editIndex = -1;
-let studentData = [];
+let studentData = JSON.parse(localStorage.getItem("studentData") ?? "[]");
 
 // functions
 // adding new students on click
@@ -19,6 +19,7 @@ function addStudent() {
   };
   data.forEach((v, k) => (newstudent[k] = v ? v : newstudent[k]));
   studentData = [...studentData, newstudent];
+  localStorage.setItem("studentData", JSON.stringify(studentData));
   form.reset();
   display(studentData);
 }
@@ -39,6 +40,7 @@ function handleStudentEdit(i) {
 function editStudent() {
   const data = new FormData(form);
   data.forEach((v, k) => (studentData[editIndex][k] = v));
+  localStorage.setItem("studentData", JSON.stringify(studentData));
   display(studentData);
   editIndex = -1;
   handleReset();
