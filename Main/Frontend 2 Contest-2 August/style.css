@@ -162,7 +162,7 @@ th {
         box-sizing: border-box;
         overflow-x: hidden;
         overflow-y: auto;
-        min-width: 200px;
+        min-width: 120px;
         text-overflow: ellipsis;
     }
 
