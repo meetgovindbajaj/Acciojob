@@ -49,6 +49,7 @@ function editStudent() {
 // deleting student
 function handleStudentDelete(i) {
   studentData = studentData.filter((_, index) => index !== i);
+  localStorage.setItem("studentData", JSON.stringify(studentData));
   display(studentData);
 }
 
