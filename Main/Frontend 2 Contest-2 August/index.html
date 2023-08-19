@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F2-C2-Aug (Govind Bajaj)</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">Student Management CRUD</div>
+
+      <!-- Form for adding or editing students -->
+      <form id="form">
+        <input type="text" id="name" placeholder="Name" name="name" />
+        <input type="email" id="email" placeholder="Email" name="email" />
+        <input
+          type="number"
+          name="gpa"
+          id="gpa"
+          min="0"
+          max="10"
+          step="0.1"
+          placeholder="GPA"
+        />
+        <input
+          type="number"
+          id="age"
+          min="16"
+          max="25"
+          placeholder="Age"
+          name="age"
+        />
+        <input type="text" id="degree" placeholder="Degree" name="degree" />
+
+        <input type="button" id="formbtn" value="Add Student" />
+        <input type="reset" />
+      </form>
+
+      <!-- Search box -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-box"
+          placeholder="Search By Name, email or degree"
+        />
+      </div>
+
+      <!-- Table containing student data -->
+      <div class="table-container">
+        <table class="table" id="table">
+          <thead>
+            <tr>
+              <th colspan="1">ID</th>
+              <th colspan="5">Student Name</th>
+              <th colspan="5">Email</th>
+              <th colspan="2">Age</th>
+              <th colspan="2">GPA</th>
+              <th colspan="3">Degree</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
