@@ -16,54 +16,58 @@
       <!-- Form for adding or editing students -->
       <form id="form" onreset="handleReset()">
         <input type="hidden" id="_id" name="_id" readonly />
-        <input
-          type="text"
-          id="name"
-          placeholder="Name"
-          name="name"
-          required
-          value="n/a"
-        />
-        <input
-          type="email"
-          id="email"
-          placeholder="Email"
-          name="email"
-          required
-          value="n@e.c"
-        />
-        <input
-          type="number"
-          name="gpa"
-          id="gpa"
-          min="0"
-          max="10"
-          step="0.2"
-          placeholder="GPA"
-          required
-          value="5"
-        />
-        <input
-          type="number"
-          id="age"
-          min="1"
-          max="70"
-          placeholder="Age"
-          name="age"
-          required
-          value="18"
-        />
-        <input
-          type="text"
-          id="degree"
-          placeholder="Degree"
-          name="degree"
-          required
-          value="n/a"
-        />
-
-        <input type="submit" id="formbtn" value="Add Student" />
-        <input type="reset" />
+        <div class="grid-inputs">
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            name="name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          <input
+            type="number"
+            name="gpa"
+            id="gpa"
+            min="0"
+            max="10"
+            step="0.2"
+            placeholder="GPA"
+            required
+          />
+          <input
+            type="number"
+            id="age"
+            min="1"
+            max="70"
+            placeholder="Age"
+            name="age"
+            required
+          />
+          <input
+            type="text"
+            id="degree"
+            placeholder="Degree"
+            name="degree"
+            required
+          />
+        </div>
+        <div class="grid-inputs">
+          <input type="submit" id="formbtn" value="Add Student" />
+          <input
+            type="button"
+            id="autoFill"
+            value="Auto Fill"
+            onclick="handleAutofill()"
+          />
+          <input type="reset" />
+        </div>
       </form>
 
       <!-- Search box -->

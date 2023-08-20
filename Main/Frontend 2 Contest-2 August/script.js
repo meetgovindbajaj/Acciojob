@@ -48,6 +48,45 @@ function editStudent() {
   handleReset();
 }
 
+// autofill student details
+function handleAutofill() {
+  const degrees = [
+    "AA",
+    "AAA",
+    "AE",
+    "AS",
+    "AGS",
+    "ASN",
+    "AF",
+    "BArch",
+    "BA",
+    "AB",
+    "BS",
+    "BSc",
+    "SB",
+    "ScB",
+    "BAA",
+    "BEng",
+    "BE",
+    "BSE",
+    "BESc",
+    "BSEng",
+    "BASc",
+    "BTech",
+    "BSc(Eng)",
+    "AMIE",
+    "GradIETE",
+  ];
+  let newstudent = {
+    name: generateRandomName(),
+    email: generateRandomName("email"),
+    gpa: generateRandom(0, 10),
+    age: generateRandom(1, 50),
+    degree: degrees[generateRandom(0, degrees.length - 1)],
+  };
+  for (const key in newstudent) form[key].value = newstudent[key];
+}
+
 // deleting student
 function handleStudentDelete(id) {
   if (confirm("Delete this student?")) {
@@ -124,6 +163,26 @@ function handleReset() {
   edit_id.innerText = "";
   formButton.value = "Add Student";
   form.reset();
+}
+
+// generates random number between given limit
+function generateRandom(start = 1, stop = 100) {
+  return Math.round(Math.random() * (stop - start) + start);
+}
+
+// generates random name
+function generateRandomName(type = "name") {
+  const vowels = "aeiou";
+  const consonants = "bcdfghjklmnpqrstvwxyz";
+  const nameLength = Math.random(Math.random() * 4) + 4;
+  let name = "";
+  let useVowel = Math.random() < 0.5;
+  for (let i = 0; i < nameLength; i++) {
+    if (useVowel) name += vowels[generateRandom(0, 4)];
+    else name += consonants[generateRandom(0, 20)];
+    useVowel = !useVowel;
+  }
+  return type === "name" ? name : name + "@gmail.com";
 }
 
 // main logic

@@ -45,8 +45,15 @@ form {
     margin-block: 2rem;
 }
 
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+}
+
 input {
-    width: 30rem;
     height: 3rem;
     background-color: transparent;
     border: 1px solid var(--gray);
@@ -54,14 +61,20 @@ input {
     color: white;
 }
 
+input[type="button"],
 input[type="submit"] {
-    width: 35rem;
     font-weight: 500;
     background-color: #fff;
     color: black;
     border-radius: 3px;
     cursor: pointer;
     transition: all .3s linear;
+    border: none;
+}
+
+input[type="button"] {
+    background-color: green;
+    color: var(--white);
 }
 
 input[type="submit"]:hover {
@@ -69,12 +82,12 @@ input[type="submit"]:hover {
 }
 
 input[type="reset"] {
-    width: 20rem;
     background-color: rgb(255, 106, 0);
     font-weight: 500;
     border-radius: 3px;
     cursor: pointer;
     transition: all .3s linear;
+    border: none;
 }
 
 input[type="reset"]:hover {
@@ -126,7 +139,11 @@ img {
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media screen and (0px < width <=900px) {
+    .grid-inputs {
+        grid-template-columns: 1fr;
+    }
+
     .table {
         display: block;
         width: 100%;
