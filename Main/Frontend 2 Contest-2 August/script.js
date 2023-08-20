@@ -117,7 +117,7 @@ function handleSearch() {
   }
 }
 
-// handling what to do when form is reset
+// handle what to do when form is reset
 function handleReset() {
   formmode = 0;
   edit_id.innerText = "";
