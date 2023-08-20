@@ -54,6 +54,7 @@ function handleStudentDelete(id) {
     studentData = studentData.filter((student) => student._id !== id);
     localStorage.setItem("studentData", JSON.stringify(studentData));
     display(studentData);
+    handleReset();
   }
 }
 
