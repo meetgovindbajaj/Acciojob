@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+.game {
+    display: grid;
+    place-items: center;
+}
+
+.grid_container {
+    width: 300px;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_cell {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.grid_cell:hover {
+    background-color: rgb(255, 224, 180);
+}
+
+[data-none] {
+    pointer-events: none;
+}
+
+[data-win] {
+    background-color: rgb(255, 186, 95);
+}

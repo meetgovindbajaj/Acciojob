@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Tic Tac Toe</div>
+      <main>
+        <section class="auth" id="auth">
+          <form id="auth_form" name="auth_form">
+            <div>
+              <label for="p1">Player 1</label>
+              <input type="text" placeholder="enter name" name="p1" id="p1" />
+            </div>
+            <div>
+              <label for="p2">Player 2</label>
+              <input type="text" placeholder="enter name" name="p2" id="p2" />
+            </div>
+            <input type="submit" value="Start Game" />
+          </form>
+        </section>
+        <section class="game" id="game">
+          <p id="turns"></p>
+          <div class="grid_container">
+            <div class="grid_cell" id="1"></div>
+            <div class="grid_cell" id="2"></div>
+            <div class="grid_cell" id="3"></div>
+            <div class="grid_cell" id="4"></div>
+            <div class="grid_cell" id="5"></div>
+            <div class="grid_cell" id="6"></div>
+            <div class="grid_cell" id="7"></div>
+            <div class="grid_cell" id="8"></div>
+            <div class="grid_cell" id="9"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
