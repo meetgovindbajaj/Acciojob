@@ -1,11 +1,12 @@
 const symbol1 = "X";
 const symbol2 = "O";
 const solution = ["123", "456", "789", "147", "258", "369", "159", "357"];
-let player1;
-let player2;
-let toggle = true;
+let player1, player2;
+let toggle = Math.round(Math.random());
 let moves_p1 = [];
 let moves_p2 = [];
+let result = false;
+const arr = [moves_p1, moves_p2];
 auth_form.onsubmit = (e) => {
   e.preventDefault();
   player1 = auth_form.p1.value;
@@ -13,40 +14,50 @@ auth_form.onsubmit = (e) => {
   auth_form.reset();
   console.log(player1, player2);
 };
-[...document.getElementsByClassName("grid_cell")].forEach((cell) =>
-  cell.addEventListener("click", (e) => {
-    e.target.setAttribute("data-none", "");
-    e.target.innerText = toggle ? symbol1 : symbol2;
-    if (toggle) {
-      moves_p1.push(e.target.id);
-      if (moves_p1.length >= 3) {
-        moves_p1.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
-        result = tester(moves_p1.join(""));
-        if (result) turns.innerText = "player 1 wins!";
-        console.log(result);
-      }
-    } else {
-      moves_p2.push(e.target.id);
-      if (moves_p2.length >= 3) {
-        moves_p2.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
-        result = tester(moves_p2.join(""));
-        if (result) turns.innerText = "player 2 wins!";
-        console.log(result);
-      }
+const cells = [...document.getElementsByClassName("grid_cell")];
+const handleEvents = (e) => {
+  e.target.setAttribute("data-none", "");
+  e.target.innerText = toggle === 0 ? symbol1 : symbol2;
+  arr[toggle].push(e.target.id);
+  if (arr[toggle].length >= 3) {
+    arr[toggle].sort(dynamicSort);
+    tester(arr[toggle].join(""));
+    if (result) {
+      turns.innerText = `player ${toggle + 1} wins!`;
+      removeClick();
+    } else if (
+      (arr[0].length === 4 && arr[1].length === 5) ||
+      (arr[0].length === 5 && arr[1].length === 4)
+    ) {
+      turns.innerText = `no one wins!`;
+      removeClick();
     }
-    toggle = !toggle;
-  })
-);
-let co = 0;
-function tester(str) {
-  let match = false;
-  solution.forEach((pattern) => {
-    const reg1 = new RegExp(pattern);
-    const reg2 = new RegExp(`[^${pattern}]`, "g");
-    let newstr = str.replace(reg2, "");
-    match = match ? match : reg1.test(newstr);
+  }
+  toggle = toggle === 0 ? 1 : 0;
+};
+cells.forEach((cell) => cell.addEventListener("click", handleEvents));
+const removeClick = () =>
+  cells.forEach((cell) => {
+    cell.setAttribute("data-none", "");
+    cell.removeEventListener("click", handleEvents);
   });
-  return match;
+
+const dynamicSort = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+function tester(str) {
+  let solCopy = [...solution];
+  solCopy.forEach((pattern) => {
+    if (
+      new RegExp(pattern).test(
+        str.replace(new RegExp(`[^${pattern}]`, "g"), "")
+      )
+    ) {
+      pattern
+        .split("")
+        .forEach((i) => cells[i - 1].setAttribute("data-win", ""));
+      result = true;
+      solCopy.length = 0;
+    }
+  });
 }
 
 function gameEngine() {}
