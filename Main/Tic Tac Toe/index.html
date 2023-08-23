@@ -8,23 +8,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">Tic Tac Toe</div>
+      <h1 class="header">Tic Tac Toe</h1>
       <main>
         <section class="auth" id="auth">
           <form id="auth_form" name="auth_form">
             <div>
-              <label for="p1">Player 1</label>
-              <input type="text" placeholder="enter name" name="p1" id="p1" />
+              <label for="player-1">Player 1</label>
+              <input
+                type="text"
+                placeholder="enter name"
+                name="p1"
+                id="player-1"
+              />
             </div>
             <div>
-              <label for="p2">Player 2</label>
-              <input type="text" placeholder="enter name" name="p2" id="p2" />
+              <label for="player-2">Player 2</label>
+              <input
+                type="text"
+                placeholder="enter name"
+                name="p2"
+                id="player-2"
+              />
             </div>
-            <input type="submit" value="Start Game" />
+            <input type="submit" value="Start Game" id="submit" />
           </form>
         </section>
         <section class="game" id="game">
-          <p id="turns"></p>
+          <p class="message" id="turns"></p>
           <div class="grid_container">
             <div class="grid_cell" id="1"></div>
             <div class="grid_cell" id="2"></div>
@@ -36,6 +46,17 @@
             <div class="grid_cell" id="8"></div>
             <div class="grid_cell" id="9"></div>
           </div>
+        </section>
+        <section data-result="false">
+          <button onclick="location.reload()">Restart Game</button>
+          <button
+            onclick="(function(){
+              localStorage.removeItem('info')
+              location.reload();
+          })()"
+          >
+            Load New Game
+          </button>
         </section>
       </main>
     </div>
