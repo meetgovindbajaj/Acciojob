@@ -1,203 +1,165 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const tryAgainButton = document.querySelector("#reset");
-const easyDifficultyButton = document.querySelector("#easy-difficulty");
-const hardDifficultyButton = document.querySelector("#hard-difficulty");
-
-const disableTryAgainButton = () => {
-  tryAgainButton.disabled = true;
-};
-
-const enableTryAgainButton = () => {
-  tryAgainButton.disabled = false;
-};
-
+// Game Constants & Variables
+let inputDir = { x: 0, y: 0 };
+const foodSound = new Audio("music/food.mp3");
+const gameOverSound = new Audio("music/gameover.mp3");
+const moveSound = new Audio("music/move.mp3");
+const musicSound = new Audio("music/music.mp3");
+let speed = 10;
 let score = 0;
-let dx = 10;
-let dy = 0;
-let gameInterval = 100;
-
-easyDifficultyButton.textContent = "Easy Difficulty (Activated)";
-
-let snake = [
-  { x: 150, y: 150 },
-  { x: 140, y: 150 },
-  { x: 130, y: 150 },
-  { x: 120, y: 150 },
-  { x: 110, y: 150 },
+let lastPaintTime = 0;
+let snakeArr = [
+  {
+    x: Math.round(2 + (16 - 2) * Math.random()),
+    y: Math.round(2 + (16 - 2) * Math.random()),
+  },
 ];
 
-const draw = () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let i = 0; i < snake.length; i++) {
-    ctx.fillStyle = "green";
-    ctx.fillRect(snake[i].x, snake[i].y, 10, 10);
-  }
-};
-
-setInterval(draw, gameInterval); //100
-
-//58 instead of 60 to prevent the food from spawning at the extreme edges, mostly it is done to reduce difficulty in timing.
 let food = {
-  x: Math.floor(Math.random() * 58) * 10,
-  y: Math.floor(Math.random() * 58) * 10,
+  x: Math.round(2 + (16 - 2) * Math.random()),
+  y: Math.round(2 + (16 - 2) * Math.random()),
 };
-
-const drawFood = () => {
-  ctx.fillStyle = "red";
-  ctx.strokeStyle = "black";
-  ctx.fillRect(food.x, food.y, 10, 10);
-  ctx.strokeRect(food.x, food.y, 10, 10);
-};
-
-const updateScore = () => {
-  score++;
-  document.querySelector("#score").textContent = score;
-};
-
-document.addEventListener("keydown", (e) => {
-  if (e.code === "KeyW" && dy === 0) {
-    dx = 0;
-    dy = -10;
-  } else if (e.code === "KeyA" && dx === 0) {
-    dx = -10;
-    dy = 0;
-  } else if (e.code === "KeyS" && dy === 0) {
-    dx = 0;
-    dy = 10;
-  } else if (e.code === "KeyD" && dx === 0) {
-    dx = 10;
-    dy = 0;
-  }
-
-  if (e.code === "ArrowUp" && dy === 0) {
-    dx = 0;
-    dy = -10;
-  } else if (e.code === "ArrowLeft" && dx === 0) {
-    dx = -10;
-    dy = 0;
-  } else if (e.code === "ArrowDown" && dy === 0) {
-    dx = 0;
-    dy = 10;
-  } else if (e.code === "ArrowRight" && dx === 0) {
-    dx = 10;
-    dy = 0;
-  }
-});
-
-const update = () => {
-  let newHead = { x: snake[0].x + dx, y: snake[0].y + dy };
-
-  if (newHead.x < 0 || newHead.x > 590 || newHead.y < 0 || newHead.y > 590) {
-    clearInterval(game);
-    alert("Game Over!");
-    document.removeEventListener("keydown", handleKeydown);
-    enableTryAgainButton();
+let hiscoreval = 0;
+// Game Functions
+function main(ctime) {
+  window.requestAnimationFrame(main);
+  //
+  if ((ctime - lastPaintTime) / 1000 < 1 / speed) {
     return;
   }
+  lastPaintTime = ctime;
+  gameEngine();
+}
 
-  if (newHead.x === food.x && newHead.y === food.y) {
-    food = {
-      x: Math.floor(Math.random() * 58) * 10,
-      y: Math.floor(Math.random() * 58) * 10,
-    };
-    updateScore();
-  } else {
-    snake.pop();
-  }
-
-  for (let i = 0; i < snake.length; i++) {
-    if (newHead.x === snake[i].x && newHead.y === snake[i].y) {
-      clearInterval(game);
-      alert("Game Over!");
-      document.removeEventListener("keydown", handleKeydown);
-      enableTryAgainButton();
-      return;
+function isCollide(snake) {
+  // If you bump into yourself
+  for (let i = 1; i < snakeArr.length; i++) {
+    if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
+      return true;
     }
   }
+  // If you bump into the wall
+  if (
+    snake[0].x >= 18 ||
+    snake[0].x <= 0 ||
+    snake[0].y >= 18 ||
+    snake[0].y <= 0
+  ) {
+    return true;
+  }
 
-  snake.unshift(newHead);
-  drawFood();
-};
+  return false;
+}
 
-disableTryAgainButton();
+function gameEngine() {
+  // Part 1: Updating the snake array & Food
+  if (isCollide(snakeArr)) {
+    gameOverSound.play();
+    musicSound.pause();
+    alert("Game Over. Press any key to play again!");
+    inputDir = { x: 0, y: 0 };
+    food = {
+      x: Math.round(2 + (16 - 2) * Math.random()),
+      y: Math.round(2 + (16 - 2) * Math.random()),
+    };
+    snakeArr = [
+      {
+        x: Math.round(2 + (16 - 2) * Math.random()),
+        y: Math.round(2 + (16 - 2) * Math.random()),
+      },
+    ];
+    // musicSound.play();
+    score = 0;
+  }
 
-let game = setInterval(update, gameInterval);
+  // If you have eaten the food, increment the score and regenerate the food
+  if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
+    foodSound.play();
+    score += 1;
+    if (score > hiscoreval) {
+      hiscoreval = score;
+      localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+      hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+    }
+    scoreBox.innerHTML = "Score: " + score;
+    snakeArr.unshift({
+      x: snakeArr[0].x + inputDir.x,
+      y: snakeArr[0].y + inputDir.y,
+    });
+    let a = 2;
+    let b = 16;
+    food = {
+      x: Math.round(a + (b - a) * Math.random()),
+      y: Math.round(a + (b - a) * Math.random()),
+    };
+  }
 
-const handleKeydown = (e) => {
-  e.preventDefault();
-};
+  // Moving the snake
+  for (let i = snakeArr.length - 2; i >= 0; i--) {
+    snakeArr[i + 1] = { ...snakeArr[i] };
+  }
 
-document.addEventListener("keydown", handleKeydown);
+  snakeArr[0].x += inputDir.x;
+  snakeArr[0].y += inputDir.y;
 
-document.querySelector("#reset").addEventListener("click", () => {
-  dx = 10;
-  dy = 0;
-  score = 0;
-  snake = [
-    { x: 150, y: 150 },
-    { x: 140, y: 150 },
-    { x: 130, y: 150 },
-    { x: 120, y: 150 },
-    { x: 110, y: 150 },
-  ];
-  disableTryAgainButton();
-  document.querySelector("#score").textContent = score;
-  game = setInterval(update, gameInterval);
-  document.addEventListener("keydown", handleKeydown);
-});
+  // Part 2: Display the snake and Food
+  // Display the snake
+  board.innerHTML = "";
+  snakeArr.forEach((e, index) => {
+    snakeElement = document.createElement("div");
+    snakeElement.style.gridRowStart = e.y;
+    snakeElement.style.gridColumnStart = e.x;
 
-hardDifficultyButton.addEventListener("click", () => {
-  // Clear the current interval
-  clearInterval(game);
+    if (index === 0) {
+      snakeElement.classList.add("head");
+    } else {
+      snakeElement.classList.add("snake");
+    }
+    board.appendChild(snakeElement);
+  });
+  // Display the food
+  foodElement = document.createElement("div");
+  foodElement.style.gridRowStart = food.y;
+  foodElement.style.gridColumnStart = food.x;
+  foodElement.classList.add("food");
+  board.appendChild(foodElement);
+}
 
-  // Reset the game
-  dx = 10;
-  dy = 0;
-  score = 0;
-  snake = [
-    { x: 150, y: 150 },
-    { x: 140, y: 150 },
-    { x: 130, y: 150 },
-    { x: 120, y: 150 },
-    { x: 110, y: 150 },
-  ];
-  disableTryAgainButton();
-  document.querySelector("#score").textContent = score;
+// Main logic starts here
+musicSound.play();
+let hiscore = localStorage.getItem("hiscore");
+if (hiscore === null) {
+  hiscoreval = 0;
+  localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+} else {
+  hiscoreval = JSON.parse(hiscore);
+  hiscoreBox.innerHTML = "HiScore: " + hiscore;
+}
 
-  // Set the new interval to 50
-  gameInterval = 50;
-  game = setInterval(update, gameInterval);
+window.requestAnimationFrame(main);
+window.addEventListener("keydown", (e) => {
+  inputDir = { x: 0, y: 1 }; // Start the game
+  moveSound.play();
+  switch (e.key) {
+    case "ArrowUp":
+      inputDir.x = 0;
+      inputDir.y = -1;
+      break;
 
-  // Update the button text
-  hardDifficultyButton.textContent = "Hard Difficulty (Activated)";
-  easyDifficultyButton.textContent = "Easy Difficulty";
-});
+    case "ArrowDown":
+      inputDir.x = 0;
+      inputDir.y = 1;
+      break;
 
-easyDifficultyButton.addEventListener("click", () => {
-  // Clear the current interval
-  clearInterval(game);
+    case "ArrowLeft":
+      inputDir.x = -1;
+      inputDir.y = 0;
+      break;
 
-  // Reset the game
-  dx = 10;
-  dy = 0;
-  score = 0;
-  snake = [
-    { x: 150, y: 150 },
-    { x: 140, y: 150 },
-    { x: 130, y: 150 },
-    { x: 120, y: 150 },
-    { x: 110, y: 150 },
-  ];
-  disableTryAgainButton();
-  document.querySelector("#score").textContent = score;
-
-  // Set the new interval to 100
-  gameInterval = 100;
-  game = setInterval(update, gameInterval);
-
-  // Update the button text
-  easyDifficultyButton.textContent = "Easy Difficulty (Activated)";
-  hardDifficultyButton.textContent = "Hard Difficulty";
+    case "ArrowRight":
+      inputDir.x = 1;
+      inputDir.y = 0;
+      break;
+    default:
+      break;
+  }
 });

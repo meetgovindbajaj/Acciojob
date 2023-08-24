@@ -14,6 +14,8 @@
 
 #### [Car Insurance Form](https://meetgovindbajaj.github.io/Acciojob/Main/Car%20Insurance%20Form/)
 
+#### [Clock](https://meetgovindbajaj.github.io/Acciojob/Main/Clock/)
+
 #### [Color Board](https://meetgovindbajaj.github.io/Acciojob/Main/Color%20Board)
 
 #### [Decimal to Binary](https://meetgovindbajaj.github.io/Acciojob/Main/Decimal%20to%20Binary/)
