@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@200;300;400;500&family=Work+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: black;
+    height: 20000px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.button-search-box {
+    background-color: #191d20;
+    width: 80vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    position: absolute;
+    left: calc(100vw - 80vw);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    background-color: #272a30;
+    height: 40px;
+    margin-left: 14px;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+.search-bar {
+    background-color: transparent;
+    outline: none;
+    margin-left: 10px;
+    border: none;
+    height: 30px;
+}
+
+#sign-up,
+#login {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    width: 40%;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.buttons-profile-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 20vw;
+    overflow-x: auto;
+    height: calc(100% - 0vh);
+    overflow-y: auto;
+
+}
+
+.aside-content {
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h4 {
+    text-align: center;
+}
+
+div>p {
+    color: red;
+    text-align: center;
+}
+
+ol {
+    margin-left: 50px;
+}
+
+.quick-links {
+    margin-top: 30px;
+}
+
+.more-about-us {
+    margin-top: 30px;
+    padding-bottom: 80px;
+}
+
+.banner {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.banner img {
+    min-width: 95%;
+    max-height: 95%;
+    margin-bottom: 1.5rem;
+}
+
+.menu-image {
+    display: block;
+    margin: 0 auto;
+}
+
+h3 {
+    margin-left: 4rem;
+}
+
+.card {
+    width: 30%;
+    background-color: #191d20;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card img {
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-and-price>p {
+    color: white;
+}
+
+.add-button {
+    color: grey;
+    display: flex;
+    background-color: #272a30;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.items-image {
+    border-radius: 4px;
+}
