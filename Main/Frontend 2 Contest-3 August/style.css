@@ -61,6 +61,7 @@ main {
     width: 40%;
     cursor: pointer;
     margin: 4px;
+    border: none;
 }
 
 .buttons-profile-div {
@@ -174,4 +175,71 @@ h3 {
 
 .items-image {
     border-radius: 4px;
+}
+
+@media (min-width: 481px) and (max-width: 1081px) {
+    .menu-image {
+        width: 50%;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .menu {
+        position: absolute;
+        left: calc(100vw - 80vw);
+    }
+
+    .banner {
+        display: inline-block;
+        width: 70%;
+        text-align: center;
+    }
+
+    .banner img {
+        width: 700px;
+        margin-bottom: 1.5rem;
+    }
+
+    .card {
+        width: 70%;
+        background-color: #191d20;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1082px) and (max-width: 1600px) {
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    main {
+        position: absolute;
+        left: calc(100vw - 80vw);
+    }
+
+    .menu-image {
+        width: 50%;
+    }
+
+    .card {
+        width: 35%;
+        background-color: #191d20;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .banner img {
+        width: 700px;
+        margin-bottom: 1.5rem;
+    }
 }
