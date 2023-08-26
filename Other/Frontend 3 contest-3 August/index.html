@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend 3 contest-3 August</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form name="signupForm" id="signupForm">
+      <div class="div">
+        required
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          autocomplete="fullname"
+          placeholder="Full Name"
+        />
+        <!-- minlength="3"
+          maxlength="20" -->
+      </div>
+      <div class="div">
+        required
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="div">
+        required
+        <input
+          type="password"
+          name="password"
+          id="password"
+          autocomplete="current-password"
+          title="Min 8 & max 10 characters, atleast 1 uppercase letter, 1
+          lowercase letter, 1 number & 1 special character"
+          aria-errormessage="Min 8 & max 10 characters, atleast 1 uppercase
+          letter, 1 lowercase letter, 1 number & 1 special character"
+          placeholder="Password"
+        />
+      </div>
+      <!-- 
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$"
+       
+     minlength="8"
+      maxlength="10" -->
+      <div class="div">
+        required
+        <input
+          type="text"
+          name="confirmPassword"
+          id="confirmPassword"
+          autocomplete="confirmPassword"
+          placeholder="Confirm Password"
+        />
+      </div>
+      <div id="message"></div>
+      <button type="submit">Signup</button>
+      <button type="reset">Reset</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
