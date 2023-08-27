@@ -1,6 +1,5 @@
 let menu = [];
 let popup = document.querySelector(".popup");
-console.log(popup);
 // fetching data from api provided by acciojob to get menu items
 const getMenu = async () => {
   try {
