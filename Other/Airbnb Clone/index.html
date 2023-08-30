@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb Clone</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favico.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./assets/Vectorlogo-white.svg" alt="" />
+        </div>
+        <ul class="pages">
+          <li class="page">Places to stay</li>
+          <li class="page">Experiences</li>
+          <li class="page">Online Experiences</li>
+        </ul>
+        <div class="right">
+          <div class="title">Become a Host</div>
+          <img src="./assets/globe.svg" alt="globe" height="28" />
+          <div class="menu">
+            <img src="./assets/menu.svg" alt="menu" />
+            <img src="./assets/Avatar.png" alt="user" />
+          </div>
+        </div>
+      </div>
+      <div class="search_container">
+        <form id="search_form">
+          <div class="form_group">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              placeholder="Where are you going?"
+              id="location"
+              name="location"
+            />
+          </div>
+          <hr />
+          <div class="form_group">
+            <label for="checkin">Check in</label>
+            <input placeholder="Add Dates" id="checkin" name="checkin" />
+          </div>
+          <hr />
+          <div class="form_group">
+            <label for="checkout">Check out</label>
+            <input
+              type="text"
+              placeholder="Add Dates"
+              id="checkout"
+              name="checkout"
+            />
+          </div>
+          <hr />
+          <div class="form_group">
+            <label for="guests">Guests</label>
+            <input
+              type="text"
+              placeholder="Add Guests"
+              id="guests"
+              name="guests"
+            />
+          </div>
+          <div class="form_btn">
+            <img src="./assets/Vectorsearch.svg" alt="" />
+          </div>
+        </form>
+      </div>
+      <div class="hero">
+        <p class="title">Not sure where to go? Perfect.</p>
+        <button class="btn">I'm flexible</button>
+      </div>
+    </div>
+  </body>
+</html>
