@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Clone</title>
+    <link
+      rel="shortcut icon"
+      href="https://1000logos.net/wp-content/uploads/2017/05/New-YouTube-logo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://apis.google.com/js/api.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="./assets/Logo.png" class="logo" alt="" />
+      <div class="search-box">
+        <input type="text" class="search-bar" placeholder="search" />
+        <button class="search-btn">
+          <img src="./assets/search.png" alt="" />
+        </button>
+        <img src="./assets/voice-search.png" alt="" />
+      </div>
+      <div class="user-options">
+        <img src="./assets/Create.png" class="icon" id="creat" alt="" />
+        <img src="./assets/more.png" class="icon" alt="" />
+        <img src="./assets/notification.png" class="icon" alt="" />
+        <div class="user-dp">
+          <img src="./assets/anonymous.jpeg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="side-bar">
+      <a href="#" class="links active"
+        ><img src="./assets/home.png" alt="" />home</a
+      >
+      <a href="#" class="links"
+        ><img src="./assets/explore.png" alt="" />explore</a
+      >
+      <a href="#" class="links"
+        ><img src="./assets/subscriprion.png" alt="" />subscription</a
+      >
+      <hr class="seperator" />
+      <a href="#" class="links"
+        ><img src="./assets/library.png" alt="" />library</a
+      >
+      <a href="#" class="links"
+        ><img src="./assets/history.png" alt="" />history</a
+      >
+      <a href="#" class="links"
+        ><img src="./assets/playlist.png" alt="" />your video</a
+      >
+      <a href="#" class="links"
+        ><img
+          src="https://th.bing.com/th/id/OIP.KgOmk5R_-WY8rnWc9Ke9LwHaHa?pid=ImgDet&rs=1"
+          alt=""
+        />watch later</a
+      >
+      <a href="#" class="links"
+        ><img src="./assets/like.png" alt="" />like videos</a
+      >
+      <a href="#" class="links"
+        ><img src="./assets/show-more.png" alt="" />show more</a
+      >
+    </div>
+
+    <div class="filters">
+      <button class="filter-options active">all</button>
+      <button class="filter-options">CSS</button>
+      <button class="filter-options">Web Development</button>
+      <button class="filter-options">Python</button>
+      <button class="filter-options">Entertainment</button>
+      <button class="filter-options">Marvel</button>
+      <button class="filter-options">Javascript</button>
+      <button class="filter-options">Artificial Intelligence</button>
+      <button class="filter-options">Machine learning</button>
+      <button class="filter-options">Trending</button>
+    </div>
+
+    <div class="video-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
