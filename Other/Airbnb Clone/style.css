@@ -214,6 +214,7 @@ body {
 
 .card>.card_img {
     width: 100%;
+    object-position: center;
 }
 
 .card_content {
@@ -234,15 +235,25 @@ body {
     gap: 1rem;
 }
 
-.box_container .box {
+.box_container .box:first-child {
+    background: url("https://source.unsplash.com/random/1280x641") 100% / cover no-repeat,
+        lightgray 50% / cover no-repeat;
+}
+
+.box_container .box:last-child {
     background: url("https://source.unsplash.com/random/1280x640") 100% / cover no-repeat,
         lightgray 50% / cover no-repeat;
+}
+
+.box_container .box {
+    background-position: center;
     height: 80vh;
     border-radius: 10px;
     color: white;
     padding: 5rem;
     text-shadow: 0px 0px 10px black;
 }
+
 
 .box_container .title {
     font-size: 2.5rem;
@@ -251,7 +262,8 @@ body {
     padding-bottom: 2rem;
 }
 
-.box_container .btn {
+.box_container .btn,
+.question_container .btn {
     background-color: white;
     color: black;
     padding: 1rem 1.5rem;
@@ -260,9 +272,271 @@ body {
     font-size: 1.1rem;
     cursor: pointer;
     transition: all .3s ease;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.217);
 }
 
-.box_container .btn:hover {
+.box_container .btn:hover,
+.question_container .btn:hover {
     -webkit-filter: invert(100%);
     filter: invert(100%);
+}
+
+/* Shop section css */
+
+.shop_container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5rem;
+}
+
+.shop_container .left {
+    flex: 1;
+
+}
+
+.shop_container .left .title {
+    font-size: 2rem;
+    font-weight: 500;
+    width: 50%;
+    padding-bottom: 1rem;
+}
+
+.shop_container .left .btn {
+    background-color: black;
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.shop_container .left .btn:hover {
+    -webkit-filter: invert(80%);
+    filter: invert(80%);
+}
+
+.shop_container .right {
+    flex: 3;
+    display: flex;
+}
+
+.shop_container .right .img {
+    border-radius: 10px;
+    position: relative;
+    object-position: center;
+}
+
+.shop_container .right .img:nth-child(1),
+.shop_container .right .img:nth-child(2) {
+    /* box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.146); */
+    backdrop-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.598));
+}
+
+.shop_container .right .img_1 {
+    z-index: 40;
+    translate: 10% -10%;
+    rotate: -5deg;
+}
+
+.shop_container .right .img_2 {
+    z-index: 30;
+    translate: 0% 10%;
+    rotate: -15deg;
+}
+
+
+.shop_container .right .img_3 {
+    z-index: 20;
+    translate: -10% -5%;
+    rotate: 15deg;
+}
+
+.question_container {
+    width: 100vw;
+    padding: 5rem;
+}
+
+.question_body {
+    background: url("https://source.unsplash.com/random/1280x640") 100% / cover no-repeat,
+        lightgray 50% / cover no-repeat;
+    background-position: center;
+    height: 80vh;
+    padding: 5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.question_body .title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.361);
+}
+
+.question_body .btn {
+    width: max-content;
+}
+
+/* inspiration getaway section css */
+.inspiration {
+    padding: 5rem;
+}
+
+.inspiration-title {
+    font-size: 25px;
+}
+
+.inspiration-headers-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.inspiration-headers {
+    flex: 1;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.inspiration-headers button:hover {
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+}
+
+.inspiration-headers button {
+    margin-bottom: 3px;
+    margin-left: -10px;
+    margin-right: 20px;
+    color: #717171;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.inspiration-headers-active {
+    color: #222222 ! important;
+    border-bottom: 2px solid #222222 !important;
+    outline-offset: unset;
+}
+
+.inspiration-column {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.inspiration-column-item {
+    flex: 1;
+}
+
+.inspiration-column-item b {
+    font-size: 14px;
+    color: #222222;
+    cursor: pointer;
+}
+
+.inspiration-column-item p {
+    font-size: 14px;
+    color: #717171;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.inspiration-line {
+    border-bottom: 2px solid lightgray;
+    margin-top: -3px;
+}
+
+/* footer section css */
+
+.footer {
+    height: 310px;
+    background-color: #F7F7F7;
+    border-top: 1px solid rgb(206, 206, 206);
+    padding: 45px 80px;
+}
+
+.menus-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-footer {
+    flex: 1;
+}
+
+.item-footer b {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: #000;
+}
+
+.item-footer p {
+    font-size: 15px;
+    color: #222222;
+    cursor: pointer;
+}
+
+.item-footer p:hover {
+    text-decoration: underline;
+}
+
+.footer-line {
+    margin-top: 40px;
+    border-top: 1px solid lightgray;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'airbnb-light';
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.footer-left {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.footer-right {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-right-left {
+    display: flex;
+    justify-content: space-between;
+    flex: 3;
+}
+
+.footer-right-center {
+    flex: 1;
+}
+
+.footer-right-right {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+
+.footer-center {
+    flex: 4;
 }

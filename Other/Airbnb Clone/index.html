@@ -1,127 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Airbnb Clone</title>
-    <link rel="icon" type="image/x-icon" href="./assets/favico.ico" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-    </style>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="main_container">
-      <div class="navbar">
-        <div class="logo">
-          <img src="./assets/Vectorlogo-white.svg" alt="" />
-        </div>
-        <ul class="pages">
-          <li class="page">Places to stay</li>
-          <li class="page">Experiences</li>
-          <li class="page">Online Experiences</li>
-        </ul>
-        <div class="right">
-          <div class="title">Become a Host</div>
-          <img src="./assets/globe.svg" alt="globe" height="28" />
-          <div class="menu">
-            <img src="./assets/menu.svg" alt="menu" />
-            <img src="./assets/Avatar.png" alt="user" />
-          </div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airbnb Clone</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favico.ico" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="./assets/Vectorlogo-white.svg" alt="" />
       </div>
-      <div class="search_container">
-        <form id="search_form">
-          <div class="form_group">
-            <label for="location">Location</label>
-            <input
-              type="text"
-              placeholder="Where are you going?"
-              id="location"
-              name="location"
-            />
-          </div>
-          <hr />
-          <div class="form_group">
-            <label for="checkin">Check in</label>
-            <input placeholder="Add Dates" id="checkin" name="checkin" />
-          </div>
-          <hr />
-          <div class="form_group">
-            <label for="checkout">Check out</label>
-            <input
-              type="text"
-              placeholder="Add Dates"
-              id="checkout"
-              name="checkout"
-            />
-          </div>
-          <hr />
-          <div class="form_group">
-            <label for="guests">Guests</label>
-            <input
-              type="text"
-              placeholder="Add Guests"
-              id="guests"
-              name="guests"
-            />
-          </div>
-          <div class="form_btn">
-            <img src="./assets/Vectorsearch.svg" alt="" />
-          </div>
-        </form>
-      </div>
-      <div class="hero">
-        <div class="title">Not sure where to go? Perfect.</div>
-        <button class="btn">I'm flexible</button>
-      </div>
-    </div>
-    <div class="inspiration_container">
-      <div class="title">Inspiration for your next trip</div>
-      <div class="card_container">
-        <div class="card">
-          <img src="./assets/blank.png" height="200" alt="" class="card_img" />
-          <div class="card_content red">
-            <div class="title">Nashville</div>
-            <div class="distance">53 miles away</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/blank.png" height="200" alt="" class="card_img" />
-          <div class="card_content pink">
-            <div class="title">South Heaven</div>
-            <div class="distance">168 miles away</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/blank.png" height="200" alt="" class="card_img" />
-          <div class="card_content peach">
-            <div class="title">Stanton</div>
-            <div class="distance">192 miles away</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/blank.png" height="200" alt="" class="card_img" />
-          <div class="card_content orange">
-            <div class="title">New Buffalo</div>
-            <div class="distance">130 miles away</div>
-          </div>
+      <ul class="pages">
+        <li class="page">Places to stay</li>
+        <li class="page">Experiences</li>
+        <li class="page">Online Experiences</li>
+      </ul>
+      <div class="right">
+        <div class="title">Become a Host</div>
+        <img src="./assets/globe.svg" alt="globe" height="28" />
+        <div class="menu">
+          <img src="./assets/menu.svg" alt="menu" />
+          <img src="./assets/Avatar.png" alt="user" />
         </div>
       </div>
     </div>
-    <div class="discover_container">
-      <div class="title">Discover Airbnb Experiences</div>
-      <div class="box_container">
-        <div class="box">
-          <div class="title">Things to do on your trip</div>
-          <button class="btn">Experiences</button>
+    <div class="search_container">
+      <form id="search_form">
+        <div class="form_group">
+          <label for="location">Location</label>
+          <input type="text" placeholder="Where are you going?" id="location" name="location" />
         </div>
-        <div class="box">
-          <div class="title">Things to do from home</div>
-          <button class="btn">Online Experiences</button>
+        <hr />
+        <div class="form_group">
+          <label for="checkin">Check in</label>
+          <input placeholder="Add Dates" id="checkin" name="checkin" />
+        </div>
+        <hr />
+        <div class="form_group">
+          <label for="checkout">Check out</label>
+          <input type="text" placeholder="Add Dates" id="checkout" name="checkout" />
+        </div>
+        <hr />
+        <div class="form_group">
+          <label for="guests">Guests</label>
+          <input type="text" placeholder="Add Guests" id="guests" name="guests" />
+        </div>
+        <div class="form_btn">
+          <img src="./assets/Vectorsearch.svg" alt="" />
+        </div>
+      </form>
+    </div>
+    <div class="hero">
+      <div class="title">Not sure where to go? Perfect.</div>
+      <button class="btn">I'm flexible</button>
+    </div>
+  </div>
+  <div class="inspiration_container">
+    <div class="title">Inspiration for your next trip</div>
+    <div class="card_container">
+      <div class="card">
+        <img src="https://source.unsplash.com/random/300x200" height="200" alt="" class="card_img" />
+        <div class="card_content red">
+          <div class="title">Nashville</div>
+          <div class="distance">53 miles away</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/300x201" height="200" alt="" class="card_img" />
+        <div class="card_content pink">
+          <div class="title">South Heaven</div>
+          <div class="distance">168 miles away</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/300x202" height="200" alt="" class="card_img" />
+        <div class="card_content peach">
+          <div class="title">Stanton</div>
+          <div class="distance">192 miles away</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/300x203" height="200" alt="" class="card_img" />
+        <div class="card_content orange">
+          <div class="title">New Buffalo</div>
+          <div class="distance">130 miles away</div>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <div class="discover_container">
+    <div class="title">Discover Airbnb Experiences</div>
+    <div class="box_container">
+      <div class="box">
+        <div class="title">Things to do on your trip</div>
+        <button class="btn">Experiences</button>
+      </div>
+      <div class="box">
+        <div class="title">Things to do from home</div>
+        <button class="btn">Online Experiences</button>
+      </div>
+    </div>
+  </div>
+  <div class="shop_container">
+    <div class="left">
+      <div class="title">Shop Airbnb gift cards</div>
+      <button class="btn">Learn more</button>
+    </div>
+    <div class="right">
+      <img src="https://source.unsplash.com/random/300x200" alt="" class="img img_1" />
+      <img src="https://source.unsplash.com/random/300x201" alt="" class="img img_2" />
+      <img src="https://source.unsplash.com/random/300x202" alt="" class="img img_3" />
+    </div>
+  </div>
+  <div class="question_container">
+    <div class="question_body">
+      <div class="title">Questions<br />about<br />hosting?</div>
+      <button class="btn">Ask a Superhost</button>
+    </div>
+  </div>
+  <div class="inspiration">
+    <b class="inspiration-title">Inpiration for future getaways</b>
+    <div class="inspiration-headers-container">
+      <div class="inspiration-headers">
+        <button class="inspiration-headers-active inspiration-headers-item">Lake Destinations</button>
+        <button class="inspiration-headers-item">Mountain Destinations</button>
+        <button class="inspiration-headers-item">Coastal Destinations</button>
+        <button class="inspiration-headers-item">Island Destinations</button>
+        <button class="inspiration-headers-item">Outdoor Destinations</b>
+          <button class="inspiration-headers-item">Other Popular Destinations</button>
+      </div>
+    </div>
+    <div class="inspiration-line"></div>
+    <div class="inspiration-column">
+      <div class="inspiration-column-item">
+        <b class="b1-1">Adirondack</b>
+        <p class="p1-1">New York</p>
+        <b class="b1-2">Balsam Lake</b>
+        <p class="p1-2">Wisconsin</p>
+        <b class="b1-3">Buckhorn</b>
+        <p class="p1-3">Ontario</p>
+      </div>
+      <div class="inspiration-column-item">
+        <b class="b2-1">Algonquin</b>
+        <p class="p2-1">Ontario</p>
+        <b class="b2-2">Bancroft</b>
+        <p class="p2-2">Ontario</p>
+        <b class="b2-3">Clear Lake</b>
+        <p class="p2-3">Ontario</p>
+      </div>
+      <div class="inspiration-column-item">
+        <b class="b3-1">Austin</b>
+        <p class="p3-1">Texas</p>
+        <b class="b3-2">Banff</b>
+        <p class="p3-2">Alberta</p>
+        <b class="b3-3">Cultus Lake</b>
+        <p class="p3-3">British Columbia</p>
+      </div>
+      <div class="inspiration-column-item">
+        <b class="b4-1">Bala</b>
+        <p class="p4-1">Ontario</p>
+        <b class="b4-2">Bracebridge</b>
+        <p class="p4-2">Ontario</p>
+        <b>Show more</b>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="menus-footer">
+      <div class="item-footer">
+        <b>Support</b>
+        <p>Help Centre</p>
+        <p>Safety Information</p>
+        <p>Cancellation Options</p>
+        <p>Our Covid-19 Responses</p>
+        <p>Supporting people with disabilities</p>
+        <p>Report a neighbourhood concern</p>
+      </div>
+      <div class="item-footer">
+        <b>Community</b>
+        <p>Airbnb.org: disaster relief housing</p>
+        <p>Support Afghan refugees</p>
+        <p>Combating discrimination</p>
+      </div>
+      <div class="item-footer">
+        <b>Hosting</b>
+        <p>Try Hosting</p>
+        <p>AirCover: protection for Hosts</p>
+        <p>Explore hosting resources</p>
+        <p>Visit out community forum</p>
+        <p>How to host responsably</p>
+      </div>
+      <div class="item-footer">
+        <b>About</b>
+        <p>Newsroom</p>
+        <p>Learn about new features</p>
+        <p>Letter from our founders</p>
+        <p>Careers</p>
+        <p>Investors</p>
+        <p>Airbnb Luxe</p>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <p>&copy; 2022 Airbnb,Inc.</p>
+        <p>·</p>
+        <p>Privacy</p>
+        <p>·</p>
+        <p>Terms</p>
+        <p>·</p>
+        <p>Sitemap</p>
+      </div>
+      <div class="footer-center"></div>
+      <div class="footer-right">
+        <div class="footer-right-left">
+          <p><span class="material-icons globe">language</span></p>
+          <p style="text-decoration: underline; font-weight: 600">
+            English (US)
+          </p>
+          <p style="font-weight: 600">
+            $ <span style="text-decoration: underline">USD</span>
+          </p>
+        </div>
+        <div class="footer-right-center"></div>
+        <div class="footer-right-right">
+          <p>
+            <i class="fa-brands fa-facebook-f" style="font-size: 17px"></i>
+          </p>
+          <p><i class="fa-brands fa-twitter" style="font-size: 17px"></i></p>
+          <p>
+            <i class="fa-brands fa-instagram-square" style="font-size: 20px"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
