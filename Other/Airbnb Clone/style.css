@@ -241,7 +241,7 @@ body {
 }
 
 .box_container .box:last-child {
-    background: url("https://source.unsplash.com/random/1280x640") 100% / cover no-repeat,
+    background: url("https://source.unsplash.com/random/1280x642") 100% / cover no-repeat,
         lightgray 50% / cover no-repeat;
 }
 
@@ -297,7 +297,7 @@ body {
 .shop_container .left .title {
     font-size: 2rem;
     font-weight: 500;
-    width: 50%;
+    width: 100%;
     padding-bottom: 1rem;
 }
 
@@ -318,8 +318,9 @@ body {
 }
 
 .shop_container .right {
-    flex: 3;
+    flex: 2;
     display: flex;
+    justify-content: end;
 }
 
 .shop_container .right .img {
@@ -359,7 +360,7 @@ body {
 }
 
 .question_body {
-    background: url("https://source.unsplash.com/random/1280x640") 100% / cover no-repeat,
+    background: url("https://source.unsplash.com/random/1280x643") 100% / cover no-repeat,
         lightgray 50% / cover no-repeat;
     background-position: center;
     height: 80vh;
