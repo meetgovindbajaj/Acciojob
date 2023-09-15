@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#reset {
+    display: none;
+}
+
+#verify {
+    display: none;
+}
+
+.imagesContainer {
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+    width: 100vw;
+    justify-content: center;
+}
+
+img {
+    border: 10px solid grey;
+    cursor: pointer;
+}
+
+[data-selected] {
+    border-color: blue;
+}
