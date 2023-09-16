@@ -12,7 +12,7 @@ const handleSearch = async () => {
     loader.style.display = "inline";
     try {
       let result = await fetch(
-        `http://www.omdbapi.com/?s=${searchQuery}&apikey=${apikey}`
+        `https://www.omdbapi.com/?s=${searchQuery}&apikey=${apikey}`
       );
       result = await result.json();
       errorMessage = result?.Error;
