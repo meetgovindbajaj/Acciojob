@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMDB ~ Govind Bajaj</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="navbar">
+      <h1 class="heading">IMDB MOVIE APP</h1>
+      <form name="searchForm" id="searchForm">
+        <!-- api key box -->
+        <div class="inputContainer">
+          <input
+            class="input"
+            type="password"
+            name="apikey"
+            id="apikey"
+            placeholder="API_KEY"
+            value="b58d40ca"
+            autocomplete="off"
+          />
+          <img src="./assets/key.svg" alt="" />
+        </div>
+
+        <!-- search box -->
+        <div class="inputContainer">
+          <input
+            class="input"
+            type="text"
+            name="searchQuery"
+            id="searchQuery"
+            placeholder="Search"
+            autofocus
+          />
+          <img
+            src="./assets/Search.svg"
+            alt=""
+            id="search"
+            onclick="handleSearch()"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- loading -->
+    <img src="./assets/loading.svg" alt="" height="50" id="loader" />
+    <!-- search results -->
+    <div id="results"></div>
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+:root {
+    --bgColor: #242a32;
+    --trans: .3s all linear;
+    --blue: #0296e5;
+    --grey: #3a3f47;
+    --greyLight: #5e6066;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: auto !important;
+    min-height: 100vh;
+    text-align: center;
+    background-color: var(--bgColor);
+    color: white;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::placeholder {
+    color: var(--greyLight);
+}
+
+/* header */
+
+.navbar {
+    padding-bottom: 2rem;
+}
+
+.heading {
+    font-size: 5rem;
+    -webkit-text-stroke: 2px var(--blue);
+    color: var(--bgColor);
+    transition: var(--trans);
+}
+
+.inputContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-block: 1rem;
+    background-color: var(--grey);
+    border-radius: 5px;
+    padding-inline: 1rem;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.inputContainer img {
+    padding-block: .5rem;
+    height: 100%;
+}
+
+.inputContainer img#search {
+    cursor: pointer;
+}
+
+/* loading */
+
+#loader {
+    display: none;
+    rotate: 0deg;
+    animation: spin .5s forwards linear infinite;
+}
+
+/* main */
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    row-gap: 1rem;
+    transition: var(--trans);
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+.cardNumber {
+    position: absolute;
+    font-size: 8rem;
+    color: transparent;
+    z-index: 99;
+    -webkit-text-stroke: 2px var(--blue);
+    bottom: 0;
+    line-height: 6rem;
+    letter-spacing: -1rem;
+    font-weight: 700;
+}
+
+.cardImg {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    align-self: center;
+}
+
+.cardTitle {
+    font-weight: 600;
+    padding: 1rem 0 1rem 1rem;
+    font-size: .8rem;
+}
+
+/* animations */
+
+@keyframes spin {
+    to {
+        rotate: 0deg;
+    }
+
+    from {
+        rotate: 360deg;
+    }
+}
+
+/* media queries */
+
+@media screen and (width<1150px) {
+    #results {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (width<950px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    #results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardNumber {
+        letter-spacing: normal;
+        font-size: 4rem;
+    }
+
+    .cardTitle {
+        padding-left: 0;
+    }
+}
+
+@media screen and (width<700px) {
+    #results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (width<500px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    #results {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
