@@ -31,7 +31,6 @@ addEventListener("keypress", (e) => e.key === "Enter" && handleSearch());
 
 // handle display
 const display = (array, error) => {
-  console.log(error, errorMessage);
   results.innerHTML = error
     ? errorMessage
     : array
