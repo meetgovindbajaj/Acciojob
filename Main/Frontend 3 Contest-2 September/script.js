@@ -8,7 +8,7 @@ const checkLoginStatus = () => {
   if (localStorage["userData"]) window.location.href = "profile.html";
 };
 
-signupPage.onload = checkLoginStatus();
+onload = checkLoginStatus();
 
 const checkValidation = () => {
   if (

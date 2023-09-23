@@ -28,4 +28,4 @@ const handleLogout = () => {
   return (window.location.href = "index.html");
 };
 
-profilePage.onload = getData();
+onload = getData();
