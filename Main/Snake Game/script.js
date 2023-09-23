@@ -137,29 +137,64 @@ if (hiscore === null) {
 
 window.requestAnimationFrame(main);
 window.addEventListener("keydown", (e) => {
-  inputDir = { x: 0, y: 1 }; // Start the game
-  moveSound.play();
+  // if (inputDir.x === 0 && inputDir.y === 0) inputDir = { x: 0, y: 1 }; // Start the game
+
   switch (e.key) {
     case "ArrowUp":
-      inputDir.x = 0;
-      inputDir.y = -1;
+    case "W":
+    case "w":
+      if (inputDir.x !== 0) {
+        moveSound.play();
+        inputDir.x = 0;
+        inputDir.y = -1;
+      } else {
+        checkStart(0, -1);
+      }
       break;
 
     case "ArrowDown":
-      inputDir.x = 0;
-      inputDir.y = 1;
+    case "S":
+    case "s":
+      if (inputDir.x !== 0) {
+        moveSound.play();
+        inputDir.x = 0;
+        inputDir.y = 1;
+      } else {
+        checkStart(0, 1);
+      }
       break;
 
     case "ArrowLeft":
-      inputDir.x = -1;
-      inputDir.y = 0;
+    case "A":
+    case "a":
+      if (inputDir.y !== 0) {
+        moveSound.play();
+        inputDir.x = -1;
+        inputDir.y = 0;
+      } else {
+        checkStart(-1, 0);
+      }
       break;
 
     case "ArrowRight":
-      inputDir.x = 1;
-      inputDir.y = 0;
+    case "D":
+    case "d":
+      if (inputDir.y !== 0) {
+        moveSound.play();
+        inputDir.x = 1;
+        inputDir.y = 0;
+      } else {
+        checkStart(1, 0);
+      }
       break;
     default:
       break;
   }
 });
+
+const checkStart = (x, y) => {
+  if (inputDir.x === 0 && inputDir.y === 0) {
+    inputDir.x = x;
+    inputDir.y = y;
+  }
+};

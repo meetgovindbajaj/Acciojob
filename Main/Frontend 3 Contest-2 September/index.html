@@ -3,12 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F3 C2 Sep ~ Govind Bajaj</title>
+    <title>F3 C2 Sep ~ Govind Bajaj (Signup)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="page" id="signupPage"></div>
-    <div class="page" id="profilePage"></div>
+    <div class="container">
+      <div class="page" id="signupPage" data-visible="true">
+        <div class="formContainer">
+          <form name="signupForm" id="signupForm">
+            <div class="greeting">Welcome back!👋</div>
+            <div class="formHeading">Sign up to your account</div>
+            <div class="inputBox">
+              <label for="fullname">Your name</label>
+              <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div class="inputBox">
+              <label for="email">Your email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="inputBox">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+            </div>
+            <div class="inputBox">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="text" name="confirmPassword" id="confirmPassword" />
+            </div>
+            <input type="button" value="Continue" onclick="handleSubmit()" />
+            <div id="formError"></div>
+          </form>
+          <div class="formRedirect">
+            Don't have an account? <span>Sign up</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
