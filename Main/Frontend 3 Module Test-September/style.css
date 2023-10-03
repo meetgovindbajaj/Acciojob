@@ -1,0 +1,85 @@
+:root {
+    --purple: #575a85;
+    --grey: #b8bccc
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: max(500px, 100vh);
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.left,
+.right {
+    flex: 1;
+    min-width: 450px;
+    padding: 2rem;
+}
+
+.left {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+}
+
+.left .heading {
+    color: var(--purple);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.left .para {
+    color: var(--grey);
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+}
+
+.left .img {
+    height: 450px;
+}
+
+.right {
+    background-color: var(--purple);
+    color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.right .heading,
+.right .heading span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.right .heading span {
+    color: white;
+}
+
+.right button {
+    border: 1.5px solid var(--grey);
+    background-color: transparent;
+    color: var(--grey);
+    padding: .5rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    cursor: pointer;
+}

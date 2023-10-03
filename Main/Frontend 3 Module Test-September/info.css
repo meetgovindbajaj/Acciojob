@@ -1,0 +1,108 @@
+:root {
+    --purple: #575a85;
+    --grey: #b8bccc;
+    --greyDark: #5c5e66;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: max(500px, 100vh);
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.heading {
+    text-align: center;
+    margin-block: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--grey);
+    text-transform: capitalize;
+}
+
+.textContainer {
+    color: var(--greyDark);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.textContainer span {
+    color: white;
+}
+
+.section_1 {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+}
+
+.section_1 .other {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1rem;
+    gap: 1rem;
+}
+
+.section_1 .other .box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.section_2 {
+    background-color: var(--purple);
+    padding: 2rem 1rem;
+}
+
+#searchForm {
+    padding: 1rem;
+}
+
+input[type="search"] {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--purple);
+    font-size: 1.1rem;
+    padding: .5rem;
+    border-radius: 7px;
+    color: var(--purple);
+}
+
+input[type="search"]::placeholder {
+    color: var(--purple);
+    opacity: .7;
+}
+
+#cardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: max(300px, 40%);
+    background-color: var(--purple);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.card .textContainer {
+    color: white;
+    margin-block: .5rem;
+}

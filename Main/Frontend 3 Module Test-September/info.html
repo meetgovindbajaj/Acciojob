@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info | F2M ~ Govind Bajaj</title>
+    <link rel="stylesheet" href="info.css" />
+  </head>
+  <body>
+    <div class="section_1">
+      <div class="textContainer">IP Address: <span id="ipaddress"></span></div>
+      <div class="other">
+        <div class="box">
+          <div class="textContainer">Lat: <span id="lat"></span></div>
+          <div class="textContainer">Long: <span id="long"></span></div>
+        </div>
+        <div class="box">
+          <div class="textContainer">City: <span id="city"></span></div>
+          <div class="textContainer">Region: <span id="region"></span></div>
+        </div>
+        <div class="box">
+          <div class="textContainer">Organisation: <span id="org"></span></div>
+          <div class="textContainer">Hostname: <span id="host"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="section_2">
+      <div class="heading">Your current location</div>
+      <div class="body">
+        <!-- New York, NY, USA (40.7127837, -74.00594130000002) -->
+        <iframe
+          id="maps"
+          width="100%"
+          height="450"
+          frameborder="0"
+          style="border: 0"
+        ></iframe>
+      </div>
+    </div>
+    <div class="section_3">
+      <div class="heading">More information about you</div>
+      <div class="body">
+        <div class="textContainer">Time Zone: <span id="tzone"></span></div>
+        <div class="textContainer">
+          Date And Time: <span id="datetime"></span>
+        </div>
+        <div class="textContainer">Pincode: <span id="pincode"></span></div>
+        <div class="textContainer">Message: <span id="msg"></span></div>
+      </div>
+    </div>
+    <div class="section_4">
+      <div class="heading">Post offices near you</div>
+      <form id="searchForm">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search By Name"
+        />
+      </form>
+      <div id="cardContainer"></div>
+    </div>
+    <script src="info.js"></script>
+  </body>
+</html>
