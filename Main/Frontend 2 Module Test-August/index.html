@@ -85,7 +85,19 @@
       <button class="filter-options">Trending</button>
     </div>
 
-    <div class="video-container"></div>
+    <div class="video-container">
+      <form id="reportForm">
+        <input type="hidden" name="id" id="vid" />
+        <div>
+          <label for="reason">Reason for reporting</label>
+          <select name="reason" id="reason">
+            <option value="violence">violence</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        <input type="submit" value="report" />
+      </form>
+    </div>
 
     <script src="script.js"></script>
   </body>

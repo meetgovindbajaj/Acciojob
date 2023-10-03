@@ -1,3 +1,4 @@
+const reportForm = document.getElementById("reportForm");
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementsByClassName("toggle-btn")[0];
   let ct = true;
@@ -113,8 +114,8 @@ const getChannelIcon = (video_data) => {
 };
 const makeVideoCard = (data) => {
   videoCardContainer.innerHTML += `
-        <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
-            <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
+        <div class="video" >
+            <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
             <div class="content">
                 <img src="${data.channelThumbnail}" class="channel-icon" alt="">
                 <div class="info">
@@ -122,9 +123,31 @@ const makeVideoCard = (data) => {
                     <p class="channel-name">${data.snippet.channelTitle}</p>
                 </div>
             </div>
+            <button onclick="handlereq('${data.id}')">Report</button>
         </div>
         `;
 };
+function handlereq(id) {
+  reportForm.vid.value = id;
+}
+
+const handleReport = () => {
+  let reports = JSON.parse(localStorage.getItem("reports") ?? "[]");
+  let fd = JSON.parse(JSON.stringify(new FormData(reportForm)));
+  console.log(fd);
+  const reason = reportForm.reason.value;
+  const obj = {
+    videoId: reportForm.vid.value,
+    reason,
+  };
+  localStorage.setItem("reports", JSON.stringify([...reports, obj]));
+};
+reportForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e);
+  handleReport();
+});
+
 // search bar
 const searchInput = document.querySelector(".search-bar");
 const searchBtn = document.querySelector(".search-btn");
